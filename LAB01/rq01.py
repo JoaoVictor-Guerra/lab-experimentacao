@@ -20,7 +20,6 @@ def get_repositories():
                         owner {
                             login
                         }
-                        stargazerCount
                         createdAt
                     }
                 }
@@ -45,7 +44,6 @@ def get_repositories():
             print(f"Repositório: {repo_data['name']}")
             print(f"Proprietário: {repo_data['owner']['login']}")
             print(f"Idade: {repo_age} dias")
-            print(f"Estrelas: {repo_data['stargazerCount']}")
             print("*******")
     else:
         print("deu ruim")
