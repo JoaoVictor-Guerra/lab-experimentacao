@@ -26,12 +26,12 @@ def get_repositories():
             }
         }
     } '''
-    headerConfig = {
+    header_config = {
         'Authorization': f'Bearer {access_token}'
     }
 
     
-    response = requests.post(url, json={'query': query}, headers=headerConfig)
+    response = requests.post(url, json={'query': query}, headers=header_config)
 
     if response.status_code == 200:
 
@@ -44,7 +44,7 @@ def get_repositories():
             print(f"Repositório: {repo_data['name']}")
             print(f"Proprietário: {repo_data['owner']['login']}")
             print(f"Idade: {repo_age} dias")
-            print("*******")
+            print("**********")
     else:
         print("deu ruim")
 
