@@ -24,19 +24,6 @@ def get_last_update_age(updated_at):
         return 0
     return age.days
 
-programming_languages_with_values = [
-    {"language": TopProgrammingLanguages.JAVASCRIPT, "value": 1},
-    {"language": TopProgrammingLanguages.PYTHON, "value": 2},
-    {"language": TopProgrammingLanguages.JAVA, "value": 3},
-    {"language": TopProgrammingLanguages.TYPESCRIPT, "value": 4},
-    {"language": TopProgrammingLanguages.C_SHARP, "value": 5},
-    {"language": TopProgrammingLanguages.CPP, "value": 6},
-    {"language": TopProgrammingLanguages.PHP, "value": 7},
-    {"language": TopProgrammingLanguages.SHELL, "value": 8},
-    {"language": TopProgrammingLanguages.C, "value": 9},
-    {"language": TopProgrammingLanguages.RUBY, "value": 10}
-]
-
 def get_repositories():
     url = 'https://api.github.com/graphql'
     query = '''
