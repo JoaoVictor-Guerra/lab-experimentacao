@@ -3,19 +3,6 @@ from config import access_token
 from datetime import datetime
 from enum import Enum
 
-class TopProgrammingLanguages(Enum):
-    JAVASCRIPT = 'JavaScript'
-    PYTHON = 'Python'
-    JAVA = 'Java'
-    TYPESCRIPT = 'Typescript'
-    C_SHARP = 'C#'
-    CPP = 'C++'
-    PHP = 'PHP'
-    SHELL = 'Shell'
-    C = 'C'
-    RUBY = 'Ruby'
-
-
 def get_last_update_age(updated_at):
     date_now = datetime.now()
     update_date = datetime.strptime(updated_at, "%Y-%m-%dT%H:%M:%SZ")
@@ -28,25 +15,24 @@ def get_repositories():
     url = 'https://api.github.com/graphql'
     query = '''
     {
-      search(query: "stars:>20", type: REPOSITORY, first: 25) {
-        edges {
-          node {
-            ... on Repository {
-              name
-              updatedAt
-              languages(first: 3, orderBy: {field: SIZE, direction: DESC}) {
-                edges {
-                  node {
-                    id
-                    name
-                  }
-                }
+  search(query: "stars:>20", type: REPOSITORY, first: 5) {
+    edges {
+      node {
+        ... on Repository {
+          name
+          updatedAt
+          issues(first: 100) {
+            edges {
+              node {
+                closed
               }
             }
           }
         }
       }
-    } '''
+    }
+  }
+} '''
     header_config = {
         'Authorization': f'Bearer {access_token}'
     }
@@ -61,14 +47,18 @@ def get_repositories():
         for repository in repositories:
             repo_data = repository['node']
             update_age = get_last_update_age(repo_data['updatedAt'])
-            repo_langs = repo_data['languages']['edges']
-            languages = []
-            for language in repo_langs:
-                lang_data = language['node']
-                languages.append(lang_data['name'])
+            issues = repo_data['issues']['edges']
+            total_issues = 0
+            closed_issues = 0
+            for issue in issues:
+                total_issues += 1
+                issue_data = issue['node']
+                if(issue_data['closed']):
+                    closed_issues+=1
             print(f"Repositório: {repo_data['name']}")
-            print(f"Idade update: {update_age} dias")
-            print(f"Linguagens: {languages}")
+            print(f"Total Issues: {total_issues}")
+            print(f"Issues Fechadas: {closed_issues}")
+            print(f"Issues Abertas: {total_issues - closed_issues}")
             print("**********")
     else:
         print("deu ruim")
