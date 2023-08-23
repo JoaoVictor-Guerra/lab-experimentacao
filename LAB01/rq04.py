@@ -16,7 +16,7 @@ def get_repositories():
     url = 'https://api.github.com/graphql'
     query = '''
     {
-      search(query: "stars:>20", type: REPOSITORY, first: 5) {
+      search(query: "stars:>20", type: REPOSITORY, first: 100) {
         edges {
           node {
             ... on Repository {
