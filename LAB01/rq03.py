@@ -43,9 +43,9 @@ def get_repositories():
                 print(f"Link: {repo_data['url']}")
                 print(
                     f"Total Releases: {repo_data['releases']['totalCount']} releases")
-                print("**********")
-            has_next_page = data['data']['search']['pageInfo']['hasNextPage']
+                print("******************")
             
+            has_next_page = data['data']['search']['pageInfo']['hasNextPage']
             if has_next_page == False:
                 break
             
