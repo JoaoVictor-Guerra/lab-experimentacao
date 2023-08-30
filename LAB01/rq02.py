@@ -6,7 +6,7 @@ def get_repositories():
     url = 'https://api.github.com/graphql'
     cursor = None
 
-    for c in range(9):
+    for c in range(10):
         query = '''
         query ($cursor: String){
             search(query: "stars:>1", type: REPOSITORY, first: 100, after: $cursor) {

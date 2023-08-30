@@ -3,6 +3,7 @@ from config import access_token
 from datetime import datetime
 from enum import Enum
 
+
 class TopProgrammingLanguages(Enum):
     JAVASCRIPT = 'JavaScript'
     PYTHON = 'Python'
@@ -24,54 +25,69 @@ def get_last_update_age(updated_at):
         return 0
     return age.days
 
+
 def get_repositories():
     url = 'https://api.github.com/graphql'
-    query = '''
-    {
-      search(query: "stars:>20", type: REPOSITORY, first: 100) {
-        edges {
-          node {
-            ... on Repository {
-              name
-              updatedAt
-              languages(first: 3, orderBy: {field: SIZE, direction: DESC}) {
-                edges {
-                  node {
-                    id
-                    name
+    cursor = None
+
+    for c in range(10):
+        query = '''
+      query($cursor: String){
+        search(query: "stars:>20", type: REPOSITORY, first: 100, after: $cursor) {
+          edges {
+            node {
+              ... on Repository {
+                name
+                updatedAt
+                languages(first: 3, orderBy: {field: SIZE, direction: DESC}) {
+                  edges {
+                    node {
+                      id
+                      name
+                    }
                   }
                 }
               }
             }
           }
+          pageInfo{
+            endCursor
+            hasNextPage
+          }
         }
-      }
-    } '''
-    header_config = {
-        'Authorization': f'Bearer {access_token}'
-    }
+      } '''
+        header_config = {
+            'Authorization': f'Bearer {access_token}'
+        }
 
-    response = requests.post(url, json={'query': query}, headers=header_config)
+        cursor_value = {
+            "cursor": cursor
+        }
 
-    if response.status_code == 200:
+        response = requests.post(
+            url, json={'query': query, 'variables': cursor_value}, headers=header_config)
 
-        data = response.json()
-        repositories = data['data']['search']['edges']
+        if response.status_code == 200:
 
-        for repository in repositories:
-            repo_data = repository['node']
-            update_age = get_last_update_age(repo_data['updatedAt'])
-            repo_langs = repo_data['languages']['edges']
-            languages = []
-            for language in repo_langs:
-                lang_data = language['node']
-                languages.append(lang_data['name'])
-            print(f"Repositório: {repo_data['name']}")
-            print(f"Idade update: {update_age} dias")
-            print(f"Linguagens: {languages}")
-            print("**********")
-    else:
-        print("deu ruim")
+            data = response.json()
+            repositories = data['data']['search']['edges']
+
+            for repository in repositories:
+                repo_data = repository['node']
+                update_age = get_last_update_age(repo_data['updatedAt'])
+                repo_langs = repo_data['languages']['edges']
+                languages = []
+                for language in repo_langs:
+                    lang_data = language['node']
+                    languages.append(lang_data['name'])
+                print(f"Repositório: {repo_data['name']}")
+                print(f"Idade update: {update_age} dias")
+                print(f"Linguagens: {languages}")
+                print("**********")
+
+            cursor = data['data']['search']['pageInfo']['endCursor']
+        else:
+            print("deu ruim")
 
 
 if __name__ == "__main__":
