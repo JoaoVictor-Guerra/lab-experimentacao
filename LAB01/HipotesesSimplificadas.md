@@ -1,3 +1,5 @@
+# Hipóteses simplificadas
+**_Sprint 02_**
 
 **RQ 01. Sistemas populares são maduros/antigos?**
 
