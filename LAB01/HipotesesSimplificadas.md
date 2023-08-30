@@ -25,3 +25,7 @@
 **RQ 06. Sistemas populares possuem um alto percentual de issues fechadas?**
 
 - Hipótese: Sistemas populares muito provavelmente têm muitas issues fechadas, por receberem bastante atenção de suas comunidades.
+
+## Justificativa para as hipóteses
+
+O que nos leva a essas hipóteses é a associação que pode ser criada entre atributos e metadados dos repositórios e sua populáridade juntamente com as características de sua comunidade.
