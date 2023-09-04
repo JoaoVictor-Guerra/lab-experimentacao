@@ -12,7 +12,7 @@ def concatena_csvs(arquivos_csv, arquivo_saida):
                     writer = csv.writer(arquivo_final)
                     writer.writerows(reader)
                 else:
-                    next(reader)  # Ignora o cabeçalho nos arquivos subsequentes
+                    #next(reader)  # Ignora o cabeçalho nos arquivos subsequentes
                     writer.writerows(reader)
     print(f"Arquivos CSV concatenados e salvos em {arquivo_saida}")
 

@@ -999,6 +999,7 @@ dolphinscheduler,apache,1642,https://github.com/apache/dolphinscheduler
 examples,serverless,2482,https://github.com/serverless/examples
 vue-hackernews-2.0,vuejs,2580,https://github.com/vuejs/vue-hackernews-2.0
 DearPyGui,hoffstadt,1188,https://github.com/hoffstadt/DearPyGui
+Name,Owner_login,Accepted_PRs,URL
 awesome,sindresorhus,624,https://github.com/sindresorhus/awesome
 system-design-primer,donnemartin,196,https://github.com/donnemartin/system-design-primer
 build-your-own-x,codecrafters-io,121,https://github.com/codecrafters-io/build-your-own-x
@@ -1999,6 +2000,7 @@ CustomTkinter,TomSchimansky,14,https://github.com/TomSchimansky/CustomTkinter
 text-mask,text-mask,251,https://github.com/text-mask/text-mask
 MySQLTuner-perl,major,264,https://github.com/major/MySQLTuner-perl
 CppTemplateTutorial,wuye9036,22,https://github.com/wuye9036/CppTemplateTutorial
+Name,Total_releases,URL
 freeCodeCamp,0,https://github.com/freeCodeCamp/freeCodeCamp
 free-programming-books,0,https://github.com/EbookFoundation/free-programming-books
 996.ICU,0,https://github.com/996icu/996.ICU
@@ -2999,6 +3001,7 @@ awesome-deep-learning,0,https://github.com/ChristosChristofidis/awesome-deep-lea
 lens,294,https://github.com/lensapp/lens
 gradio,139,https://github.com/gradio-app/gradio
 llvm-project,89,https://github.com/llvm/llvm-project
+Name,Update_age,URL
 freeCodeCamp,-1,https://github.com/freeCodeCamp/freeCodeCamp
 free-programming-books,-1,https://github.com/EbookFoundation/free-programming-books
 996.ICU,-1,https://github.com/996icu/996.ICU
@@ -3999,6 +4002,7 @@ awesome-deep-learning,-1,https://github.com/ChristosChristofidis/awesome-deep-le
 lens,0,https://github.com/lensapp/lens
 gradio,-1,https://github.com/gradio-app/gradio
 llvm-project,-1,https://github.com/llvm/llvm-project
+Name,Language,URL
 freeCodeCamp,TypeScript,https://github.com/freeCodeCamp/freeCodeCamp
 free-programming-books,none,https://github.com/EbookFoundation/free-programming-books
 996.ICU,none,https://github.com/996icu/996.ICU
@@ -4999,6 +5003,7 @@ awesome-deep-learning,none,https://github.com/ChristosChristofidis/awesome-deep-
 lens,TypeScript,https://github.com/lensapp/lens
 gradio,Python,https://github.com/gradio-app/gradio
 llvm-project,none,https://github.com/llvm/llvm-project
+Name,Language,URL
 freeCodeCamp,0.988,https://github.com/freeCodeCamp/freeCodeCamp
 free-programming-books,0.965,https://github.com/EbookFoundation/free-programming-books
 996.ICU,,https://github.com/996icu/996.ICU
