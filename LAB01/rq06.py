@@ -1,6 +1,17 @@
 import requests
 import csv
 from config import access_token
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def make_box_plot(arr):
+    plt.boxplot(arr, vert=False, whis=[25, 75])
+    plt.title('Percentual de Issues Fechadas')
+    plt.xlabel('Valores')
+    plt.yticks([]) 
+    plt.grid(True)
+    plt.show()
 
 
 def calculate_percentage(open_issues, closed_issues):
@@ -10,12 +21,14 @@ def calculate_percentage(open_issues, closed_issues):
     percentage = (closed_issues/total_issues)
     return f'{percentage:.3f}'
 
+
 def get_repositories(file_name):
     with open(file_name, 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["Name", "Language", "URL"])
         url = 'https://api.github.com/graphql'
         cursor = None
+        repo_issues_values = []
 
         csv_data = []
         for c in range(10):
@@ -65,12 +78,17 @@ def get_repositories(file_name):
                     csv_data += [[repo_data['name'], calculate_percentage(
                         open_issues, closed_issues), repo_data['url']]]
 
+                    if calculate_percentage(open_issues, closed_issues) is not None:
+                      repo_issues_values.append(float(calculate_percentage(open_issues, closed_issues)))
+
                 cursor = data['data']['search']['pageInfo']['endCursor']
             else:
                 print("deu ruim")
         print("Acabou")
         writer.writerows(csv_data)
         file.close
+        #print(repo_issues_values)
+        make_box_plot(repo_issues_values)
 
 
 if __name__ == "__main__":
