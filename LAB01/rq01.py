@@ -6,11 +6,19 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def make_box_plot(arr):
+    median = np.median(arr)
+
     plt.boxplot(arr, vert=False, whis=[25, 75])
-    plt.title('Idade dos repositórios')
-    plt.xlabel('Valores')
-    plt.yticks([]) 
+    plt.title('Idade dos Repositórios')
+    plt.xlabel('Idade (em dias)')
+
+    plt.scatter([median], [1], color='red', marker='o', label='Mediana')
+    plt.text(median, 1, f'Mediana: {median}', color='red',
+             verticalalignment='bottom', horizontalalignment='left')
+
+    plt.yticks([])
     plt.grid(True)
+    plt.legend()
     plt.show()
 
 def get_repository_age(created_at):

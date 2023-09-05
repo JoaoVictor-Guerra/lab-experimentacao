@@ -6,11 +6,19 @@ import numpy as np
 
 
 def make_box_plot(arr):
+    median = np.median(arr)
+
     plt.boxplot(arr, vert=False, whis=[25, 75])
+
+    plt.scatter([median], [1], color='red', marker='o', label='Mediana')
+    plt.text(median, 1, f'Mediana: {median}', color='red',
+             verticalalignment='bottom', horizontalalignment='left')
+
     plt.title('Percentual de Issues Fechadas')
-    plt.xlabel('Valores')
-    plt.yticks([]) 
+    plt.xlabel('Número de Issues fechadas pelo total de Issues')
+    plt.yticks([])
     plt.grid(True)
+    plt.legend()
     plt.show()
 
 
@@ -79,7 +87,8 @@ def get_repositories(file_name):
                         open_issues, closed_issues), repo_data['url']]]
 
                     if calculate_percentage(open_issues, closed_issues) is not None:
-                      repo_issues_values.append(float(calculate_percentage(open_issues, closed_issues)))
+                        repo_issues_values.append(
+                            float(calculate_percentage(open_issues, closed_issues)))
 
                 cursor = data['data']['search']['pageInfo']['endCursor']
             else:
@@ -87,7 +96,7 @@ def get_repositories(file_name):
         print("Acabou")
         writer.writerows(csv_data)
         file.close
-        #print(repo_issues_values)
+        # print(repo_issues_values)
         make_box_plot(repo_issues_values)
 
 

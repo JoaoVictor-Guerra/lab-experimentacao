@@ -5,13 +5,21 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def make_box_plot(arr):
-    plt.boxplot(arr, vert=False, whis=[25, 75])
-    plt.title('Contribuição Externa')
-    plt.xlabel('Valores')
-    plt.yticks([]) 
-    plt.grid(True)
-    plt.show()
+    median = np.median(arr)
 
+    plt.boxplot(arr, vert=False, whis=[25, 75])
+    plt.title('Contribuições Externas')
+    plt.xlabel('Total de PRs aceitas')
+
+    plt.scatter([median], [1], color='red', marker='o', label='Mediana')
+    plt.text(median, 1, f'Mediana: {median}', color='red',
+             verticalalignment='bottom', horizontalalignment='left')
+
+    plt.yticks([])
+    plt.grid(True)
+    plt.legend()
+    plt.show()
+    
 def get_repositories(file_name):
     with open(file_name, 'w', newline='') as file:
         writer = csv.writer(file)
