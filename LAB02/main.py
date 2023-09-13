@@ -2,6 +2,8 @@ import subprocess
 import pickle
 import os
 import pandas as pd
+import shutil
+
 
 path = os.path.dirname(__file__)
 path_repo_clone = os.path.join(path, 'repoClone.py')
@@ -21,11 +23,24 @@ def clone_repo(repo):
         os.system(command_clone)
 
         # obter métricas do CK
+        os.chdir(path_stats)
+
         command_ck = f"java -jar ck-0.7.1-SNAPSHOT-jar-with-dependencies.jar {path_repos} {path_stats}"
         os.system(command_ck)
 
+        os.chdir(path)
+
     except Exception as e:
         print(f"Erro: {e}")
+
+def dump_repo():
+    for root, dirs, files in os.walk(path_repos):
+        for f in files:
+            os.unlink(os.path.join(root, f))
+        for d in dirs:
+            shutil.rmtree(os.path.join(root, d))
+
+
 
 def generate_csv():
     csv_path = "stats/class.csv"
@@ -55,9 +70,10 @@ def make_full_cv(csv1_path, csv2_path, output_csv_path):
     result_df.to_csv(output_csv_path, index=False)
 
 if __name__ == "__main__":
-    with open('dump.py', 'rb') as arc:
+    with open('LAB02/dump.py', 'rb') as arc:
         repos = pickle.load(arc)
 
     clone_repo(repos[0])
     generate_csv()
     make_full_cv(csv1_path, csv2_path, output_csv_path)  
+    dump_repo()

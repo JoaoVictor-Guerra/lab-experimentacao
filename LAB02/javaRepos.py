@@ -2,8 +2,10 @@ import requests
 import json
 import pickle
 import csv
+import os
 from config import access_token
 from datetime import datetime
+
 
 url = "https://api.github.com/graphql"
 cursor = None
@@ -95,8 +97,11 @@ for c in range(10):
     else:
         print("deu ruim")
 
-with open('dump.py', 'wb') as arc:
+with open('LAB02/dump.py', 'wb') as arc:
     pickle.dump(repo_links, arc)
 
 # Exportar os dados para o arquivo CSV
 export_repo_data(repo_data)
+
+#command = "python main.py"
+#os.system(command)
