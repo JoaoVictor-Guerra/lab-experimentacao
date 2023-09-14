@@ -38,7 +38,7 @@ def dump_repo():
         for f in files:
             os.unlink(os.path.join(root, f))
         for d in dirs:
-            os.system(f"rd /s /q {path_repos}")#shutil.rmtree(os.path.join(root, d))# "rd /s /q caminho"
+            os.system(f"rd /s /q {path_repos}")
 
 
 
@@ -73,7 +73,7 @@ def generate_csv():
     
     updated_df.to_csv(new_csv, index=False)
 
-def make_full_cv(csv_git_path, csv_ck_path, output_csv_path):
+def make_full_csv(csv_git_path, csv_ck_path, output_csv_path):
     df1 = pd.read_csv(csv_git_path)
     df2 = pd.read_csv(csv_ck_path)
     
@@ -91,7 +91,8 @@ if __name__ == "__main__":
     with open('LAB02/dump.py', 'rb') as arc:
         repos = pickle.load(arc)
 
-    clone_repo(repos[0])
-    generate_csv()
-    make_full_cv(csv_git_path, csv_ck_path, output_csv_path)  
-    dump_repo()
+    for i in range(0, 9):
+        clone_repo(repos[i])
+        generate_csv()
+        make_full_csv(csv_git_path, csv_ck_path, output_csv_path)  
+        dump_repo()
