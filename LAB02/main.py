@@ -51,21 +51,37 @@ def generate_csv():
     total_cbo = df["cbo"].median()
     total_dit = df["dit"].max()
     
-    totals_df = pd.DataFrame({
-        "LCOM": [total_lcom],
-        "LOC": [total_loc],
-        "CBO": [total_cbo],
-        "DIT": [total_dit]
-    })
-    
     new_csv = "stats/metricas_repo.csv"
-    totals_df.to_csv(new_csv, index=False)
+    
+    if os.path.isfile(new_csv):
+        existing_df = pd.read_csv(new_csv)
+        new_row = pd.DataFrame({
+            "LCOM": [total_lcom],
+            "LOC": [total_loc],
+            "CBO": [total_cbo],
+            "DIT": [total_dit]
+        })
+        updated_df = pd.concat([existing_df, new_row], ignore_index=True)
+        
+    else:
+        updated_df = pd.DataFrame({
+            "LCOM": [total_lcom],
+            "LOC": [total_loc],
+            "CBO": [total_cbo],
+            "DIT": [total_dit]
+        })
+    
+    updated_df.to_csv(new_csv, index=False)
 
 def make_full_cv(csv_git_path, csv_ck_path, output_csv_path):
     df1 = pd.read_csv(csv_git_path)
     df2 = pd.read_csv(csv_ck_path)
     
-    result_df = pd.concat([df1, df2], ignore_index=True)
+    # Redefina os índices do df2
+    df2.reset_index(drop=True, inplace=True)
+    
+    # Concatene os DataFrames ao longo das linhas
+    result_df = pd.concat([df1, df2], axis=1, ignore_index=False)
     
     print(result_df)
 
