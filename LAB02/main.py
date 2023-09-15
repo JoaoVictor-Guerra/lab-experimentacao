@@ -101,7 +101,7 @@ if __name__ == "__main__":
 
             print(index)
 
-            if i >= repos_calculados.size/4 and i<3:
+            if i >= repos_calculados.size/4:
 
                 clone_repo(repos_total[index])
                 generate_csv()  
