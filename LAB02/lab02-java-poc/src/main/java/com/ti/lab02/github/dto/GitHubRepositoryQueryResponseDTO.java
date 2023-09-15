@@ -17,4 +17,7 @@ public class GitHubRepositoryQueryResponseDTO {
     private long diskUsage;
     @JsonProperty("releases")
     private GitHubRepositoryReleasesInternalDTO releases;
+    @JsonProperty("stargazers")
+    private GitHubRepositoryStargazersInternalDTO stargazers;
+
 }

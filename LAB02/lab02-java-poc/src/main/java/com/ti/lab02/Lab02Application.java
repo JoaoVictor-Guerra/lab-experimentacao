@@ -1,6 +1,7 @@
 package com.ti.lab02;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ti.lab02.ckmetric.CKMetricService;
 import com.ti.lab02.github.GitHubService;
 import okhttp3.*;
 import org.json.JSONObject;
@@ -26,9 +27,12 @@ public class Lab02Application {
 
     @Bean
     public CommandLineRunner commandLineRunner (
-            GitHubService service ) {
+            GitHubService gitHubService,
+            CKMetricService ckMetricService
+    ) {
         return args -> {
-            service.request();
+            gitHubService.request(1);
+            ckMetricService.extractMetricsOfAllRepositories();
         };
 
     };

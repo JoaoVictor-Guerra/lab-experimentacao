@@ -69,6 +69,23 @@
             <version>20230618</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.eclipse.jgit/org.eclipse.jgit -->
+        <dependency>
+            <groupId>org.eclipse.jgit</groupId>
+            <artifactId>org.eclipse.jgit</artifactId>
+            <version>6.7.0.202309050840-r</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.opencsv/opencsv -->
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>5.8</version>
+        </dependency>
+
+
+
+
 
         <!--▌║█║▌│║▌│║▌║▌█║Postgres Dependencies ▌│║▌║▌│║║▌█║▌║█-->
 
