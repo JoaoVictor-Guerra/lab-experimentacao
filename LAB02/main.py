@@ -83,16 +83,32 @@ def make_full_csv(csv_git_path, csv_ck_path, output_csv_path):
     # Concatene os DataFrames ao longo das linhas
     result_df = pd.concat([df1, df2], axis=1, ignore_index=False)
     
-    print(result_df)
+    #print(result_df)
 
     result_df.to_csv(output_csv_path, index=False)
 
 if __name__ == "__main__":
     with open('LAB02/dump.py', 'rb') as arc:
-        repos = pickle.load(arc)
+        repos_total = pickle.load(arc)
 
-    for i in range(0, 9):
-        clone_repo(repos[i])
-        generate_csv()
-        make_full_csv(csv_git_path, csv_ck_path, output_csv_path)  
-        dump_repo()
+        list_repos = pd.read_csv(csv_git_path)
+        repos_calculados = pd.read_csv(csv_ck_path)
+
+        print(f'tamanho:{repos_calculados.size}')
+        print(f'tamanho/4:{repos_calculados.size/4}')
+        i=0
+        for index, row in list_repos.iterrows():
+
+            print(index)
+
+            if i >= repos_calculados.size/4 and i<3:
+
+                clone_repo(repos_total[index])
+                generate_csv()  
+                dump_repo()
+            
+            i = i+1 
+            print(f'i:{i}')
+
+        make_full_csv(csv_git_path, csv_ck_path, output_csv_path)
+                

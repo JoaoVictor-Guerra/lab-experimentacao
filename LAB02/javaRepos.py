@@ -1,8 +1,6 @@
 import requests
-import json
 import pickle
 import csv
-import os
 from config import access_token
 from datetime import datetime
 
@@ -15,7 +13,7 @@ repo_data = []
 def export_repo_data(arr):
     csv_arc = "github_data.csv"
 
-    columns = ["nome", "idade", "estrelas", "releases"]
+    columns = ["nome", "idade", "estrelas", "releases","url"]
 
     with open(csv_arc, mode="w", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=columns)
@@ -75,9 +73,9 @@ for c in range(10):
 
         for repository in repositories:
             repo_name = repository["node"]["nameWithOwner"]
-            repo_url = repository["node"]["url"]
             repo_date = get_repository_age(repository["node"]["createdAt"])
             repo_releases = repository["node"]["releases"]["totalCount"]
+            repo_url = repository["node"]["url"]
             repo_stars = repository["node"]["stargazers"]["totalCount"]
 
             repo_links.append(repo_url)
@@ -87,13 +85,15 @@ for c in range(10):
                 "nome": repo_name,
                 "idade": repo_date,
                 "estrelas": repo_stars,
-                "releases": repo_releases
+                "releases": repo_releases,
+                "url": repo_url
             }
 
             repo_data.append(repo_dict)
 
+        print(c)
         cursor = data['data']['search']['pageInfo']['endCursor']
-
+        
     else:
         print("deu ruim")
 
