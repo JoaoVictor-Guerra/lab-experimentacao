@@ -1,23 +1,18 @@
 package com.ti.lab02.ckmetric;
 
-
-import com.github.mauricioaniche.ck.CK;
-import com.github.mauricioaniche.ck.CKClassResult;
-import com.github.mauricioaniche.ck.CKNotifier;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.opencsv.exceptions.CsvException;
 import com.ti.lab02.github.GitHubService;
 import com.ti.lab02.repo.Repository;
 import com.ti.lab02.repo.RepositoryService;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CKMetricService {
@@ -31,119 +26,117 @@ public class CKMetricService {
     @Autowired
     private GitHubService gitHubService;
 
-    public void extractMetricsOfAllRepositories(){
+
+    public void extractMetricsOfAllRepositories() {
         List<Repository> repositoryList = repositoryService.findAll();
 
-        repositoryList.forEach(repository -> {
-            CKMetric ckMetric = null;
-            try {
-                ckMetric = extractMetricsFromRepository(repository);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            } catch (CsvException e) {
-                throw new RuntimeException(e);
-            }
-            repository.setCkMetric(ckMetric);
-            repositoryService.save(repository);
-        });
+        int startingPoint = 0;
+        for (int i = startingPoint ; i <= 1000 ; i++){
+            extractMetricsFromRepository(repositoryList.get(i));
+            gitHubService.removeGitHubRepository(repositoryList.get(i).getName());
+        }
     }
 
-    private CKMetric extractMetricsFromRepository(Repository repository) throws IOException, InterruptedException, CsvException {
-        gitHubService.cloneGitHubRepository(repository.getUrl(), "");
-        this.runCkTool(repository);
-        return this.proccessCks(repository);
-
+    public void extractMetricsFromRepository(Repository repository) {
+        try {
+            gitHubService.cloneGitHubRepository(repository.getUrl(), "");
+            runCkTool(repository);
+            CKMetric collectedCKMetric = processCks(repository);
+            collectedCKMetric.setRepository(repository);
+            ckMetricRepository.save(collectedCKMetric);
+        } catch (IOException | InterruptedException | CsvException e) {
+            throw new RuntimeException("Erro ao extrair métricas do repositório: " + repository.getName(), e);
+        }
     }
 
-    private CKMetric proccessCks(Repository repository) throws IOException, CsvException {
+    public CKMetric processCks(Repository repository) throws IOException, CsvException {
         String csvPath = "class.csv";
 
         try (CSVReader csvReader = new CSVReaderBuilder(new FileReader(csvPath))
-                .withSkipLines(1) // Ignora a primeira linha se for um cabeçalho
+                .withSkipLines(1)
                 .build()) {
 
             List<String[]> csvData = csvReader.readAll();
 
-            // Assumindo que as colunas lcom, loc, cbo e dit existem no CSV
-            double totalLcom = csvData.stream()
-                    .mapToDouble(row -> Double.parseDouble(row[1])) // Índice da coluna "lcom"
-                    .average()
-                    .orElse(0.0);
+            // Extrair valores das colunas relevantes
+            List<Double> cboValues = csvData.stream()
+                    .map(row -> Double.parseDouble(row[3])) // Índice da coluna "cbo"
+                    .collect(Collectors.toList());
 
-            int totalLoc = csvData.stream()
-                    .mapToInt(row -> Integer.parseInt(row[2])) // Índice da coluna "loc"
-                    .sum();
+            List<Integer> locValues = csvData.stream()
+                    .map(row -> Integer.parseInt(row[32])) // Índice da coluna "loc"
+                    .collect(Collectors.toList());
 
-            double totalCbo = csvData.stream()
-                    .mapToDouble(row -> Double.parseDouble(row[3])) // Índice da coluna "cbo"
-                    .average()
-                    .orElse(0.0);
+            List<Integer> ditValues = csvData.stream()
+                    .map(row -> Integer.parseInt(row[7])) // Índice da coluna "dit"
+                    .collect(Collectors.toList());
 
-            int totalDit = csvData.stream()
-                    .mapToInt(row -> Integer.parseInt(row[4])) // Índice da coluna "dit"
-                    .max()
-                    .orElse(0);
+            List<Double> lcomValues = csvData.stream()
+                    .map(row -> Double.parseDouble(row[11])) // Índice da coluna "lcom"
+                    .collect(Collectors.toList());
 
-            System.out.println("Total LCOM: " + totalLcom);
-            System.out.println("Total LOC: " + totalLoc);
-            System.out.println("Total CBO: " + totalCbo);
-            System.out.println("Total DIT: " + totalDit);
+            // Calcular métricas
+            double cboMedian = calculateMedian(cboValues);
+            int locSum = locValues.stream().mapToInt(Integer::intValue).sum();
+            int ditMax = ditValues.stream().mapToInt(Integer::intValue).max().orElse(0);
+            double lcomMedian = calculateMedian(lcomValues);
 
-            gitHubService.removeGitHubRepository(repository.getName());
+            System.out.println("Mediana CBO: " + cboMedian);
+            System.out.println("Soma LOC: " + locSum);
+            System.out.println("Maior DIT: " + ditMax);
+            System.out.println("Mediana LCOM: " + lcomMedian);
 
             return CKMetric.builder()
-                    .loc(totalLoc)
-                    .cbo(totalCbo)
-                    .dit(totalDit)
-                    .lcom(totalLcom)
+                    .loc(locSum)
+                    .cbo(cboMedian)
+                    .dit(ditMax)
+                    .lcom(lcomMedian)
                     .build();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
         }
     }
 
-    private void runCkTool(Repository repository) throws IOException, InterruptedException {
-        String command = "java -jar ck-0.7.1-SNAPSHOT-jar-with-dependencies.jar " + repository.getName() +" "+repository.getName()+"/";
+    private double calculateMedian(List<Double> values) {
+        if (!values.isEmpty()) {
+            values.sort(Double::compareTo);
+            int size = values.size();
+            if (size % 2 == 0) {
+                int middleIndex1 = (size - 1) / 2;
+                int middleIndex2 = middleIndex1 + 1;
+                return (values.get(middleIndex1) + values.get(middleIndex2)) / 2.0;
+            } else {
+                int middleIndex = size / 2;
+                return values.get(middleIndex);
+            }
+        }
+        return 0;
+    }
+
+    private void runCkTool(Repository repository) {
+        String command = "java -jar ck-0.7.1-SNAPSHOT-jar-with-dependencies.jar " + repository.getName() + "/";
 
         ProcessBuilder processBuilder = new ProcessBuilder("/bin/bash", "-c", command);
         processBuilder.redirectErrorStream(true);
 
-        Process process = processBuilder.start();
-        int exitCode = process.waitFor();
+        try {
+            Process process = processBuilder.start();
+            int exitCode = process.waitFor();
 
-        System.out.println("Comando a ser executado: " + command);
+            System.out.println("Comando a ser executado: " + command);
 
-        if (exitCode == 0) {
-            System.out.println("Métricas ck geradas para "+repository.getName());
-        } else {
-            System.err.println("Erro ao processar ck do repositório. Código de saída: " + exitCode);
-            try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()))) {
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    System.err.println(line);
+            if (exitCode == 0) {
+                System.out.println("Métricas CK geradas para " + repository.getName());
+            } else {
+                System.err.println("Erro ao processar métricas CK do repositório. Código de saída: " + exitCode);
+                try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()))) {
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        System.err.println(line);
+                    }
                 }
             }
+        } catch (IOException | InterruptedException e) {
+            throw new RuntimeException("Erro ao executar a ferramenta CK para o repositório: " + repository.getName(), e);
         }
     }
-
-    public void calculateCbo(){
-
-    }
-
-    public void calculateLcom(){
-
-    }
-
-    public void calculateDit(){
-
-    }
-
-    public void calculateLoc(){
-
-    }
-
-
 
 }

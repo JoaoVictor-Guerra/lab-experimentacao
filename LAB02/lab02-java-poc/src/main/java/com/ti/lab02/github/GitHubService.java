@@ -10,6 +10,7 @@ import com.ti.lab02.github.dto.GitHubRepositoryStargazersInternalDTO;
 import com.ti.lab02.repo.Repository;
 import com.ti.lab02.repo.RepositoryService;
 import okhttp3.*;
+import org.apache.commons.io.FileUtils;
 import org.eclipse.jgit.api.Git;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +41,7 @@ public class GitHubService {
     private String cursor = null;
 
     private String QUERY = "query {\n" +
-            "  search(query: \"language:Java stars:>100\", type: REPOSITORY, first: 2, after: " + this.cursor + ") {\n" +
+            "  search(query: \"language:Java stars:>100\", type: REPOSITORY, first: 100, after: " + this.cursor + ") {\n" +
             "    edges {\n" +
             "      node {\n" +
             "        ... on Repository {\n" +
@@ -160,26 +164,54 @@ public class GitHubService {
         }
     }
 
-    public void removeGitHubRepository(String repoName) throws IOException, InterruptedException {
-        String command = "rm -rf "+repoName;
+    public void removeGitHubRepository(String repoName) {
+        try {
+            // Validar o nome do repositório para segurança
+            if (!isValidRepoName(repoName)) {
+                throw new IllegalArgumentException("Nome de repositório inválido: " + repoName);
+            }
 
-        ProcessBuilder processBuilder = new ProcessBuilder("/bin/bash", "-c", command);
-        processBuilder.redirectErrorStream(true);
+            // Criar o comando para remover o diretório usando "rm -rf"
+            String command = "rm -rf " + repoName;
 
-        Process process = processBuilder.start();
-        int exitCode = process.waitFor();
+            // Criar o processo para executar o comando
+            ProcessBuilder processBuilder = new ProcessBuilder("/bin/bash", "-c", command);
+            processBuilder.redirectErrorStream(true);
 
-        if (exitCode == 0) {
-            System.out.println("Repositório removido com sucesso: " + repoName);
-        } else {
-            System.err.println("Erro ao remover o repositório. Código de saída: " + exitCode);
-            try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()))) {
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    System.err.println(line);
-                }
+            Process process = processBuilder.start();
+            int exitCode = process.waitFor();
+
+            if (exitCode == 0) {
+                System.out.println("Repositório removido com sucesso: " + repoName);
+            } else {
+                System.err.println("Erro ao remover o repositório. Código de saída: " + exitCode);
+                handleProcessOutput(process);
+            }
+        } catch (IOException | InterruptedException e) {
+            handleException("Erro ao remover o repositório: " + repoName, e);
+        }
+    }
+
+    private void handleProcessOutput(Process process) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.err.println(line);
             }
         }
+    }
+
+    private boolean isValidRepoName(String repoName) {
+        // Implemente a lógica de validação do nome do repositório, se necessário.
+        // Certifique-se de que o nome seja seguro e não contenha caracteres perigosos.
+        // Por exemplo, você pode verificar se o nome atende aos padrões do GitHub.
+        // Retorna true se o nome for válido, caso contrário, retorna false.
+        return true;
+    }
+
+    private void handleException(String message, Exception e) {
+        System.err.println(message);
+        e.printStackTrace(); // Registrar a exceção para fins de depuração
     }
 
 //    public void cloneGitHubRepository(String repositoryUrl, String destinationPath) throws IOException, InterruptedException {

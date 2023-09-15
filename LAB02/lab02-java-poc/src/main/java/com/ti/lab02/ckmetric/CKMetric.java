@@ -27,7 +27,7 @@ public class CKMetric extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column
+    @Column(name = "id")
     private long id;
 
     @Builder.Default
@@ -51,5 +51,6 @@ public class CKMetric extends BaseEntity {
     private double lcom;
 
     @OneToOne
+    @JoinColumn(name = "fk_rpository")
     private Repository repository;
 }

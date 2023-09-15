@@ -2,8 +2,10 @@ package com.ti.lab02.repo;
 
 
 import com.ti.lab02.github.dto.GitHubRepositoryQueryResponseDTO;
+import com.ti.lab02.global.domain.exceptions.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -44,7 +46,12 @@ public class RepositoryService {
         return repositoryRepository.findAll();
     }
 
-    public Repository save(Repository repository) {
-        return repositoryRepository.save(repository);
+    public void save(Repository repository) {
+        repositoryRepository.save(repository);
+    }
+
+    public Repository findById(long id) {
+        return repositoryRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Repositório não encontrado", HttpStatus.NOT_FOUND));
     }
 }

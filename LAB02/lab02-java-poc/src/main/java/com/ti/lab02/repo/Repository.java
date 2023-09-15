@@ -25,7 +25,7 @@ import static com.ti.lab02.utils.HashUtils.generateHash;
 public class Repository extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column
+    @Column(name = "id")
     private long id;
 
     @Builder.Default
@@ -50,8 +50,7 @@ public class Repository extends BaseEntity {
     @Column(name = "stargazer_total_count")
     private long startgazerTotalCount;
 
-    @OneToOne(mappedBy = "repository")
-    @JoinColumn(name = "fk_ck_metric")
+    @OneToOne(mappedBy = "repository", fetch = FetchType.EAGER)
     private CKMetric ckMetric;
 
 }
