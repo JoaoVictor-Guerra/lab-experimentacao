@@ -94,8 +94,6 @@ if __name__ == "__main__":
         list_repos = pd.read_csv(csv_git_path)
         repos_calculados = pd.read_csv(csv_ck_path)
 
-        print(f'tamanho:{repos_calculados.size}')
-        print(f'tamanho/4:{repos_calculados.size/4}')
         i=0
         for index, row in list_repos.iterrows():
 
@@ -103,7 +101,7 @@ if __name__ == "__main__":
 
             if i >= repos_calculados.size/4:
 
-                clone_repo(repos_total[index])
+                clone_repo(row.get('url'))
                 generate_csv()  
                 dump_repo()
             
