@@ -1,0 +1,28 @@
+FeedBack sobre o ultimo relatório:
+
+- Relatórios tem que ter discussões
+- Apresentar figuras e fazer leituras sobre elas
+
+1. Limpar os dados, desconsiderar repositórios com dados incompletos
+2. Gerar grafico Popuparidade:
+	2.1. LCOM
+	2.2. DIT
+	2.3. LOC
+	2.4. CBO
+3. Gerar grafico Matuturidade:
+	3.1. LCOM
+	3.2. DIT
+	3.3. LOC
+	3.4. CBO
+4. Gerar grafico Atividade:
+	4.1. LCOM
+	4.2. DIT
+	4.3. LOC
+	4.4. CBO
+5. Gerar grafico Tamanho:
+	5.1. LCOM
+	5.2. DIT
+	5.3. LOC
+	5.4. CBO
+6. Colocar os graficos no relatório
+7. Comentar e explicar os gráficos diante das hipóteses
