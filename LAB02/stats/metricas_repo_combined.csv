@@ -1,6 +1,5 @@
 nome,idade,estrelas,releases,url,LCOM,LOC,CBO,DIT
 GrowingGit/GitHub-Chinese-Top-Charts,1470,65317,0,https://github.com/GrowingGit/GitHub-Chinese-Top-Charts,0.0,5,0.0,1.0
-elastic/elasticsearch,4966,65098,121,https://github.com/elastic/elasticsearch,,0,,
 TheAlgorithms/Java,2616,53536,0,https://github.com/TheAlgorithms/Java,1.0,30643,2.0,4.0
 spring-projects/spring-framework,4663,53109,268,https://github.com/spring-projects/spring-framework,0.0,672925,3.0,70.0
 square/retrofit,4755,41975,0,https://github.com/square/retrofit,0.0,26753,3.0,16.0
@@ -31,7 +30,6 @@ zaproxy/zaproxy,3025,11229,334,https://github.com/zaproxy/zaproxy,1.0,180583,3.0
 alibaba/vlayout,2390,10826,34,https://github.com/alibaba/vlayout,0.0,14042,3.0,7.0
 clojure/clojure,4824,10121,0,https://github.com/clojure/clojure,0.0,44086,0.0,48.0
 googlesamples/easypermissions,2823,9728,12,https://github.com/googlesamples/easypermissions,6.0,1705,8.0,3.0
-react-native-camera/react-native-camera,3088,9637,144,https://github.com/react-native-camera/react-native-camera,,0,,
 hackware1993/MagicIndicator,2636,9541,12,https://github.com/hackware1993/MagicIndicator,3.0,4533,4.0,4.0
 bilibili/DanmakuFlameMaster,3686,9464,5,https://github.com/bilibili/DanmakuFlameMaster,1.0,12879,3.0,14.0
 jwtk/jjwt,3288,9303,0,https://github.com/jwtk/jjwt,0.0,14052,4.0,42.0
@@ -126,7 +124,6 @@ tobato/FastDFS_Client,2816,1466,0,https://github.com/tobato/FastDFS_Client,0.0,4
 apache/parquet-format,3383,1456,0,https://github.com/apache/parquet-format,0.0,835,4.0,12.0
 laobie/NineGridImageView,2749,1450,0,https://github.com/laobie/NineGridImageView,0.0,1962,3.0,3.0
 race604/WaveLoading,2472,1446,0,https://github.com/race604/WaveLoading,0.0,394,2.0,2.0
-wupeixuan/JDKSourceCode1.8,2013,1442,0,https://github.com/wupeixuan/JDKSourceCode1.8,,0,,
 birdLark/LarkMidTable,1138,1442,0,https://github.com/birdLark/LarkMidTable,0.0,13217,3.0,5.0
 kenglxn/QRGen,4262,1440,12,https://github.com/kenglxn/QRGen,6.0,2548,3.0,4.0
 yahoo/mysql_perf_analyzer,3039,1433,0,https://github.com/yahoo/mysql_perf_analyzer,3.0,21938,3.0,3.0
@@ -345,7 +342,6 @@ varunest/SparkButton,2623,1262,7,https://github.com/varunest/SparkButton,1.0,967
 fusesource/mqtt-client,4289,1260,0,https://github.com/fusesource/mqtt-client,1.0,4568,3.0,4.0
 kongzue/DialogV3,1637,1259,0,https://github.com/kongzue/DialogV3,0.0,9765,2.0,5.0
 openrewrite/rewrite,1219,1258,185,https://github.com/openrewrite/rewrite,1.0,158934,6.0,72.0
-xamarin/XobotOS,4153,1246,0,https://github.com/xamarin/XobotOS,,0,,
 toddway/MaterialTransitions,3059,1239,0,https://github.com/toddway/MaterialTransitions,1.0,899,3.0,4.0
 DSheirer/sdrtrunk,2942,1236,36,https://github.com/DSheirer/sdrtrunk,3.0,163963,4.0,38.0
 rnmods/react-native-document-picker,2634,1221,39,https://github.com/rnmods/react-native-document-picker,6.0,430,9.0,4.0
@@ -357,7 +353,6 @@ c0ny1/passive-scan-client,1498,1199,3,https://github.com/c0ny1/passive-scan-clie
 danylovolokh/LondonEyeLayoutManager,2834,1196,0,https://github.com/danylovolokh/LondonEyeLayoutManager,0.0,1114,3.0,3.0
 iammert/ExpandableLayout,2236,1195,6,https://github.com/iammert/ExpandableLayout,0.0,377,2.0,2.0
 CNSRE/HTTPDNSLib,2982,1194,0,https://github.com/CNSRE/HTTPDNSLib,1.0,20189,3.0,5.0
-semicons/java_oci_manage,658,1194,63,https://github.com/semicons/java_oci_manage,,0,,
 klinker24/talon-for-twitter-android,2624,1193,4,https://github.com/klinker24/talon-for-twitter-android,0.0,72646,3.0,14.0
 liaohuqiu/cube-sdk,3536,1189,3,https://github.com/liaohuqiu/cube-sdk,1.0,11407,3.0,5.0
 ToDou/appbarlayout-spring-behavior,2527,1188,6,https://github.com/ToDou/appbarlayout-spring-behavior,0.0,1967,2.5,4.0
@@ -395,7 +390,6 @@ anji-plus/captcha,1281,1078,0,https://github.com/anji-plus/captcha,1.0,4492,2.0,
 ahmetaa/zemberek-nlp,3755,1074,0,https://github.com/ahmetaa/zemberek-nlp,0.0,54273,3.0,34.0
 kohlschutter/boilerpipe,3209,1073,0,https://github.com/kohlschutter/boilerpipe,1.0,4674,4.0,4.0
 javacc/javacc,2612,1073,11,https://github.com/javacc/javacc,3.0,20731,3.0,7.0
-1n7erface/PocList,916,1071,0,https://github.com/1n7erface/PocList,,0,,
 sujithkanna/SmileyRating,2422,1071,0,https://github.com/sujithkanna/SmileyRating,0.0,2960,2.0,3.0
 jbake-org/jbake,3847,1067,23,https://github.com/jbake-org/jbake,0.5,8562,4.0,5.0
 lovedise/PermissionGen,2857,1064,0,https://github.com/lovedise/PermissionGen,0.0,329,2.5,2.0
@@ -508,7 +502,6 @@ xchengx/ChinaMap,2598,148,0,https://github.com/xchengx/ChinaMap,0.0,709,2.0,2.0
 LuckyJayce/LoadViewHelper,3082,148,0,https://github.com/LuckyJayce/LoadViewHelper,0.0,416,4.0,3.0
 raffaeleguidi/DirectMemory,4668,148,0,https://github.com/raffaeleguidi/DirectMemory,1.0,1925,4.0,2.0
 jasonwyatt/Android-DebugPort,2698,148,11,https://github.com/jasonwyatt/Android-DebugPort,1.0,1773,5.0,2.0
-kysonzhu/wallpaper,2052,148,0,https://github.com/kysonzhu/wallpaper,,0,,
 githubhaohao/MVVMRxJavaRetrofitSample,2405,148,0,https://github.com/githubhaohao/MVVMRxJavaRetrofitSample,0.0,497,2.0,2.0
 jungletian/TitanjumNote,2937,148,0,https://github.com/jungletian/TitanjumNote,1.0,4025,2.0,5.0
 elasticfence/elasticsearch-http-user-auth,2869,148,10,https://github.com/elasticfence/elasticsearch-http-user-auth,1.0,1815,2.5,2.0
@@ -611,7 +604,6 @@ duanhong169/ColorPicker,1887,337,9,https://github.com/duanhong169/ColorPicker,0.
 eclipse-ee4j/glassfish,1825,336,33,https://github.com/eclipse-ee4j/glassfish,1.0,283050,4.0,16.0
 Glucosio/glucosio-android,3013,335,28,https://github.com/Glucosio/glucosio-android,0.0,10561,3.0,4.0
 openmessaging/benchmark,2145,335,0,https://github.com/openmessaging/benchmark,0.0,5198,2.0,4.0
-aionnetwork/aion,2061,335,46,https://github.com/aionnetwork/aion,,0,,
 wayn111/waynboot-mall,1237,335,0,https://github.com/wayn111/waynboot-mall,0.0,8487,4.0,4.0
 antonkrasov/AndroidProgressLayout,3231,334,0,https://github.com/antonkrasov/AndroidProgressLayout,3.0,356,7.0,2.0
 neykov/extract-tls-secrets,3117,334,4,https://github.com/neykov/extract-tls-secrets,1.0,558,4.0,4.0
@@ -636,7 +628,6 @@ hitherejoe/Constraints,2674,326,0,https://github.com/hitherejoe/Constraints,0.0,
 marcelpinto/RxFlux,2897,326,2,https://github.com/marcelpinto/RxFlux,0.0,1147,3.0,2.0
 giraud/reasonml-idea-plugin,2424,326,0,https://github.com/giraud/reasonml-idea-plugin,3.0,47819,6.0,10.0
 BasicAirData/GPSLogger,3251,326,44,https://github.com/BasicAirData/GPSLogger,0.0,8326,2.0,5.0
-MuiseDestiny/zotero-file,49,326,20,https://github.com/MuiseDestiny/zotero-file,,0,,
 vladexologija/PinterestListView,3950,324,0,https://github.com/vladexologija/PinterestListView,0.0,183,2.0,2.0
 ybq/nougat-boot-animation,2603,324,0,https://github.com/ybq/nougat-boot-animation,1.0,130,5.0,3.0
 leonchen83/redis-rdb-cli,1901,324,40,https://github.com/leonchen83/redis-rdb-cli,0.0,13892,3.0,5.0
@@ -672,12 +663,10 @@ react-native-component/react-native-smart-barcode,2620,310,0,https://github.com/
 kmshack/Android-TopScrollHelper,2900,309,0,https://github.com/kmshack/Android-TopScrollHelper,0.0,241,2.0,2.0
 dreamlivemeng/UpMarqueeTextView-master,2612,309,0,https://github.com/dreamlivemeng/UpMarqueeTextView-master,0.0,156,1.0,2.0
 yuweiguocn/SquareLoading,2489,308,3,https://github.com/yuweiguocn/SquareLoading,0.0,292,2.0,2.0
-brucetoo/ListVideoPlay,2520,307,0,https://github.com/brucetoo/ListVideoPlay,,0,,
 ryderchan/point-to-offer-edition2,2291,307,0,https://github.com/ryderchan/point-to-offer-edition2,1.0,4095,2.0,1.0
 zjcscut/octopus,991,307,0,https://github.com/zjcscut/octopus,0.0,11793,3.0,4.0
 ktgw0316/LightZone-backup,3903,306,31,https://github.com/ktgw0316/LightZone-backup,1.0,95131,2.0,11.0
 CryptoKass/NoobChain-Tutorial-Part-1,2097,305,0,https://github.com/CryptoKass/NoobChain-Tutorial-Part-1,0.0,91,3.0,1.0
-spring-attic/spring-ide,4257,305,0,https://github.com/spring-attic/spring-ide,,0,,
 apache/commons-cli,5222,305,0,https://github.com/apache/commons-cli,1.0,5202,5.0,5.0
 rjsvieira/floatingMenu,2324,304,4,https://github.com/rjsvieira/floatingMenu,1.0,1150,3.0,2.0
 RikkaW/MaterialPreference,2747,304,15,https://github.com/RikkaW/MaterialPreference,1.0,8028,4.0,14.0
@@ -698,7 +687,6 @@ cesardeazevedo/react-native-collapsing-toolbar,2297,296,3,https://github.com/ces
 mars05/crud-intellij-plugin,1593,296,10,https://github.com/mars05/crud-intellij-plugin,1.0,2765,4.0,9.0
 antkaynak/Keyist-Ecommerce,1945,296,0,https://github.com/antkaynak/Keyist-Ecommerce,0.0,3644,4.0,4.0
 DevinShine/easyloadingbtn,3091,295,0,https://github.com/DevinShine/easyloadingbtn,0.0,304,2.0,2.0
-guooscar/JazminServer,3188,295,2,https://github.com/guooscar/JazminServer,,0,,
 mmin18/Dex65536,3477,349,0,https://github.com/mmin18/Dex65536,49995000.0,180136,0.0,2.0
 laobie/SelectableTextHelper,2566,349,4,https://github.com/laobie/SelectableTextHelper,0.0,820,2.0,2.0
 spring-projects-experimental/spring-boot-migrator,574,349,7,https://github.com/spring-projects-experimental/spring-boot-migrator,1.0,47518,5.0,11.0
@@ -724,7 +712,6 @@ zhaoyachao/zdh_web,1319,343,0,https://github.com/zhaoyachao/zdh_web,1.0,38248,3.
 SenhLinsh/Utils-Everywhere,2625,342,12,https://github.com/SenhLinsh/Utils-Everywhere,8.0,9532,3.0,8.0
 dianrong/UniAuth,2457,341,0,https://github.com/dianrong/UniAuth,1.0,86794,3.0,6.0
 coyarzun89/FabTransitionActivity,2871,341,0,https://github.com/coyarzun89/FabTransitionActivity,2.5,488,2.0,4.0
-Drun1baby/JavaSecurityLearning,430,341,0,https://github.com/Drun1baby/JavaSecurityLearning,,0,,
 huangruiLearn/HRLChatUi,1732,340,0,https://github.com/huangruiLearn/HRLChatUi,0.0,3832,1.5,3.0
 denimgroup/threadfix,3568,340,0,https://github.com/denimgroup/threadfix,1.0,86325,5.0,12.0
 je-ge/spring-boot,2485,338,0,https://github.com/je-ge/spring-boot,0.0,1109,4.0,4.0
@@ -772,7 +759,6 @@ Netflix/aegisthus,3620,323,2,https://github.com/Netflix/aegisthus,1.0,3674,5.0,5
 CryptoMorin/XSeries,1552,323,16,https://github.com/CryptoMorin/XSeries,0.0,8613,2.0,12.0
 antoniolg/DaggerExample,3381,323,0,https://github.com/antoniolg/DaggerExample,0.5,287,3.0,3.0
 inaka/TinyTask,3122,322,2,https://github.com/inaka/TinyTask,0.0,98,2.0,2.0
-LjyYano/LeetCode,2871,322,0,https://github.com/LjyYano/LeetCode,,0,,
 UniversaBlockchain/universa,2220,322,0,https://github.com/UniversaBlockchain/universa,0.0,90781,4.0,19.0
 fenixsoft/microservice_arch_springcloud,1277,322,0,https://github.com/fenixsoft/microservice_arch_springcloud,0.0,1584,5.0,5.0
 f4b6a3/tsid-creator,1278,322,11,https://github.com/f4b6a3/tsid-creator,2.5,2948,3.0,2.0
@@ -921,7 +907,6 @@ hisenyuan/SSM_BookSystem,2334,396,0,https://github.com/hisenyuan/SSM_BookSystem,
 wepay/waltz,1542,396,9,https://github.com/wepay/waltz,1.0,36972,3.0,11.0
 TheFinestArtist/YouTubePlayerActivity,3824,395,1,https://github.com/TheFinestArtist/YouTubePlayerActivity,0.0,543,2.0,2.0
 guaishouN/android-thinkmap-treeview,860,395,1,https://github.com/guaishouN/android-thinkmap-treeview,1.0,7554,4.0,3.0
-eclipse-archived/ceylon,2861,394,0,https://github.com/eclipse-archived/ceylon,,0,,
 kevalpatel2106/android-hidden-camera,2506,394,7,https://github.com/kevalpatel2106/android-hidden-camera,0.0,963,2.0,3.0
 braintree/braintree_android,3354,394,154,https://github.com/braintree/braintree_android,0.0,28106,3.0,9.0
 seancfoley/IPAddress,2613,392,24,https://github.com/seancfoley/IPAddress,1.0,71979,4.0,30.0
