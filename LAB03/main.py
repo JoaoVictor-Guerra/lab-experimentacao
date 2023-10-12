@@ -6,10 +6,10 @@ cursor = None
 header_config = {'Authorization': f'Bearer {access_token}'}
 url = 'https://api.github.com/graphql'
 
-for c in range(2): 
+for c in range(2):
     query = """
     query ($cursor: String) {
-        search(query: "is:pr is:merged is:closed review:required", type: ISSUE, first: 100, after: $cursor) {
+        search(query: "is:pr is:merged or is:pr is:closed review:required is:public", type: ISSUE, first: 100, after: $cursor) {
             edges {
                 node {
                     ... on PullRequest {
@@ -60,8 +60,8 @@ for c in range(2):
             merged_at = datetime.strptime(
                 node['mergedAt'], '%Y-%m-%dT%H:%M:%SZ') if node['mergedAt'] else None
 
-            if (merged_at and (merged_at - created_at).total_seconds() > 3600) or \
-                    (closed_at and (closed_at - created_at).total_seconds() > 3600):
+            if (merged_at and closed_at and (merged_at - created_at).total_seconds() > 3600) or \
+                    (closed_at and not merged_at and (closed_at - created_at).total_seconds() > 3600):
                 new_prs.append({
                     'repository': node['repository']['nameWithOwner'],
                     'created_at': created_at,
@@ -71,7 +71,7 @@ for c in range(2):
                 })
 
         if not new_prs:
-            print("Nenhum PR encontrado com mais de 1h de duração entre a abertura e o fechamento")
+            print("Nenhum PR encontrado com mais de 1 hora de duração entre a abertura e o fechamento")
             break
 
         for pr in new_prs:
@@ -89,4 +89,4 @@ for c in range(2):
 
         cursor = data['data']['search']['pageInfo']['endCursor']
     else:
-        print('lascou')
+        print('Erro na solicitação à API do GitHub')
