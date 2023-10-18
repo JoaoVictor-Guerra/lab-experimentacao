@@ -1,5 +1,6 @@
 package com.ti.lab02.repo;
 
+import com.ti.lab02.ckmetric.CKMetric;
 import com.ti.lab02.global.domain.entity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
@@ -17,14 +18,14 @@ import static com.ti.lab02.utils.HashUtils.generateHash;
         @UniqueConstraint(name = "uk_repository_hash_id", columnNames = {"hash_id"}),
         @UniqueConstraint(name = "uk_repository", columnNames = {"id"})
 })
-@SQLDelete(sql = "UPDATE t_university SET deleted = true WHERE id = ?")
+@SQLDelete(sql = "UPDATE t_repository SET deleted = true WHERE id = ?")
 @Where(clause = "deleted = false")
 @ToString(of = {"id", "hashId"})
 @EqualsAndHashCode(of = "id", callSuper = false)
 public class Repository extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column
+    @Column(name = "id")
     private long id;
 
     @Builder.Default
@@ -34,6 +35,9 @@ public class Repository extends BaseEntity {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "name_with_owner")
+    private String nameWithOwner;
+
     @Column(name = "url")
     private String url;
 
@@ -42,5 +46,11 @@ public class Repository extends BaseEntity {
 
     @Column(name = "release_total_count")
     private long releaseTotalCount;
+
+    @Column(name = "stargazer_total_count")
+    private long startgazerTotalCount;
+
+    @OneToOne(mappedBy = "repository", fetch = FetchType.EAGER)
+    private CKMetric ckMetric;
 
 }
