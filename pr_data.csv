@@ -207,534 +207,604 @@ show.jade is only called from index.jade. This fix removes double output of thos
 "
 freeCodeCamp/freeCodeCamp,"App ""listens"" before 'MongoStore' is ready fix",CLOSED,2015-03-18T03:19:50Z,True,False,2015-03-18T06:20:36Z,,0,2,17,11,11,"fix for #224 
 "
-freeCodeCamp/freeCodeCamp,fix email validation issue #212,MERGED,2015-03-18T06:22:00Z,True,True,2015-03-21T07:40:03Z,2015-03-21T07:40:03Z,0,3,0,1,1,
-freeCodeCamp/freeCodeCamp,Reactify,CLOSED,2015-03-19T09:26:07Z,True,False,2015-03-21T07:55:44Z,,0,2,1,22,22,"Eslint fix for webstorm and renamed bonfire to bonfires in the model to use existing collection.
+freeCodeCamp/freeCodeCamp,Add AirBnB setting to jshint settings file.,MERGED,2014-12-24T20:43:10Z,True,True,2014-12-27T06:16:17Z,2014-12-27T06:16:17Z,0,3,2,1,1,
+freeCodeCamp/freeCodeCamp,Refactor Passport/update FCC link,CLOSED,2014-12-31T05:35:50Z,True,False,2015-01-20T17:29:39Z,,0,1,0,42,42,"Refactor passport to conform to jshint settings.
+Remove html extension on FCC links in challenge 
+
+fixes https://github.com/FreeCodeCamp/freecodecamp/issues/6 
 "
-freeCodeCamp/freeCodeCamp,User will now get a point for news/stories interactions,MERGED,2015-03-22T11:08:50Z,True,True,2015-03-28T13:12:18Z,2015-03-28T13:12:18Z,0,3,5,1021,1021,"User will get one point for a story submission as well as a point for every upvote on a submitted story. Closes #156 
+freeCodeCamp/freeCodeCamp,Update Branden's Team Member Bio,MERGED,2015-01-09T15:55:49Z,True,True,2015-01-09T18:58:45Z,2015-01-09T18:58:45Z,0,2,0,2,2,"I know I entered massage therapist as most recent job on the initial form,
+but that was two years ago. Plus, afterwards, I realized that writing a book for
+a publisher counts as most recent job (I forget about freelance stuff sometimes)!
+Also removed part about Hypercard because I figure most code campers
+won't know what I was referring to.
 "
-freeCodeCamp/freeCodeCamp,Bonfire MDN links - Issue #255,MERGED,2015-03-24T05:34:06Z,True,True,2015-03-29T03:34:34Z,2015-03-29T03:34:34Z,0,5,7,18,18,"Links for the one-flame bonfires have been added. I can continue with the rest or leave it here, up to you.
+freeCodeCamp/freeCodeCamp,Pull request twitter pic,CLOSED,2015-01-09T20:25:01Z,True,False,2015-01-10T04:33:39Z,,0,2,1,2,2,"The profile picture pulled from twitter with `profile_image_url_https` will have `_normal.png` attached to the end of the url. According to the [Twitter Docs](https://dev.twitter.com/overview/general/user-profile-images-and-banners), normal = 48x48px (too small for the new bio pages).
 
-If there are no links to show, the ""helpful links"" header does not display.
-
-TODO? I can also add an input on the ""create bonfire"" page to allow a user to add these at time of creation.
+I removed the last 11 characters ('_normal.png') and then added the `.png` back. I'm sure there is more elegant way to do it.
 "
-freeCodeCamp/freeCodeCamp,Add production error handler,MERGED,2015-03-24T15:12:04Z,True,True,2015-03-25T13:56:04Z,2015-03-25T13:56:04Z,0,1,0,3,3,
-freeCodeCamp/freeCodeCamp,Controller error handlers,MERGED,2015-03-26T05:55:58Z,True,True,2015-03-31T20:46:58Z,2015-03-31T20:46:58Z,0,3,17,42,42,"#261
+freeCodeCamp/freeCodeCamp,Angularize login,CLOSED,2015-01-10T03:10:26Z,True,False,2015-01-10T04:31:13Z,,0,1,0,433,433,"Fixes email signup/signin issues and angularizes the email signup form. Also adds unique username check to profile.jade.
 "
-freeCodeCamp/freeCodeCamp,Stories reply and upvote redirect to signin when user isn't signed in.,MERGED,2015-03-28T05:19:18Z,True,True,2015-03-29T21:27:43Z,2015-03-29T21:27:42Z,0,2,1,3,3,"Redirects user back to story after signing in.
+freeCodeCamp/freeCodeCamp,Forgot password,MERGED,2015-01-10T05:23:28Z,True,True,2015-01-10T18:56:01Z,2015-01-10T18:56:01Z,0,2,1,3,3,
+freeCodeCamp/freeCodeCamp,Edit wording of jquery exercises,MERGED,2015-01-12T19:31:28Z,True,True,2015-01-13T06:12:42Z,2015-01-13T06:12:42Z,0,2,1,4,4,"Removed 'the' from some of the questions for consistency. The rule applied: either use ""the <target> element"" or only ""<target>"" when not following with ""element."" Alternatively, instead of removing ""the,"" you could instead add ""element"" to the end of each reference to a target. But as it was, the wording was inconsistent.
 
-Fix for #259
-
-**_I HAVE NOT TESTED THIS WITH OAUTH SIGN IN. Only Email.**_
+Also removed extra ""from.""
 "
-freeCodeCamp/freeCodeCamp,Bonfire mdn links: 3-4 flame,MERGED,2015-03-28T17:12:24Z,True,True,2015-03-29T21:28:58Z,2015-03-29T21:28:58Z,0,3,2,31,31,"This commit actually includes the ones from 1-2 as well.
-
-I generally tried to give less help on the later bonfires.
-
-The comma mistype from the other commit should be fixed here as well. 
+freeCodeCamp/freeCodeCamp,Twitter auth,CLOSED,2015-01-17T22:46:48Z,True,False,2015-01-18T01:31:40Z,,0,1,1,194,194,"Solves issue [#32](https://github.com/FreeCodeCamp/freecodecamp/issues/32). Closing the issue upon submission of this PR.
 "
-freeCodeCamp/freeCodeCamp,Coursewares error handling (issue #261),MERGED,2015-03-28T18:03:03Z,True,True,2015-03-29T21:32:16Z,2015-03-29T21:32:16Z,0,3,1,19,19,"Only a few things needed fixed here.
+freeCodeCamp/freeCodeCamp,One column challenges,CLOSED,2015-01-18T00:50:02Z,True,False,2015-01-18T02:53:49Z,,0,2,0,295,295,
+freeCodeCamp/freeCodeCamp,Twitter auth and bonfire,MERGED,2015-01-18T01:37:40Z,True,True,2015-01-18T02:53:26Z,2015-01-18T02:53:26Z,0,2,0,194,194,"Resolves issue #32 and adds bonfire to FCC.
 "
-freeCodeCamp/freeCodeCamp,Posts completed status when challenge 2 is opened for issue #274,MERGED,2015-03-28T21:20:06Z,True,True,2015-03-29T21:34:13Z,2015-03-29T21:34:13Z,0,2,1,0,0,"I've modified the logic to mark challenge 2 completed when it has been selected then continue redirecting to challenge 3 as it was originally designed.
+freeCodeCamp/freeCodeCamp,Update main.less,CLOSED,2015-01-18T04:04:45Z,True,False,2015-01-21T15:25:26Z,,0,3,1,2,2,"Smaller, monospaced font for code display.
 "
-freeCodeCamp/freeCodeCamp,Ux improvements,MERGED,2015-03-29T12:15:55Z,True,True,2015-03-29T21:57:43Z,2015-03-29T21:57:43Z,0,3,1,3055,3055,"Zipline logic ready to go, master has been merged.
+freeCodeCamp/freeCodeCamp,Adding testing feature to bonfire,CLOSED,2015-01-18T07:59:04Z,True,False,2015-01-21T06:50:47Z,,0,1,1,4,4,"I have created an addition to the bonfire IDE that allows users to test any function within the main coding window.  Here are some pieces of its functionality:
+- Identifies arguments and creates input boxes for each
+- Side by side mode with editor
+- Test suite execution displays percentage of tests correct, highlights passing tests green, failing tests red
+- For failing tests, displays what the actual output was
+- Users can delete tests once they are created
+
+Here are some todos that still remain:
+- Don't use the eval method to evaluate the test. Nate has the plugin, but it is currently only configured with the console output.  I need to make the test framework work as a callback from the plugin completing its execution.  This requires changing a large portion of Nate's code, so I held off on it.
+- Allow other types of comparisons besides equality.  We can test behavior, type, length, features of a JSON object, almost anything with chai.
 "
-freeCodeCamp/freeCodeCamp,"Fix some bugs, improver perf of show all bonfires/challenges and add buttons to challenge views",MERGED,2015-03-30T00:11:05Z,True,True,2015-03-30T20:12:56Z,2015-03-30T20:12:56Z,0,2,0,47,47,
-freeCodeCamp/freeCodeCamp,Take @brndbr's styleguide to address #112,MERGED,2015-03-30T00:30:40Z,True,True,2015-03-30T20:12:40Z,2015-03-30T20:12:40Z,0,2,0,13,13,
-freeCodeCamp/freeCodeCamp,Create Wiki controller to replace our static pages,MERGED,2015-03-30T23:00:55Z,True,True,2015-04-15T08:03:19Z,2015-04-15T08:03:19Z,0,2,2,803,803,
-freeCodeCamp/freeCodeCamp,added 5 new bonfires,MERGED,2015-03-31T03:34:53Z,True,True,2015-04-12T04:02:10Z,2015-04-12T04:02:10Z,0,2,2,2,2,"Created 5 new bonfires, four level 2 and one level 4
+freeCodeCamp/freeCodeCamp,Added a title to bonfire for seo,MERGED,2015-01-18T16:32:01Z,True,True,2015-01-21T15:22:46Z,2015-01-21T15:22:46Z,0,2,0,1,1,"Learn to code is our focus keyword for seo, so I added a title :)
 "
-freeCodeCamp/freeCodeCamp,On story submission create unique story URL if slug already exists,MERGED,2015-03-31T04:16:01Z,True,True,2015-03-31T20:43:28Z,2015-03-31T20:43:28Z,0,1,5,33,33,"#283
+freeCodeCamp/freeCodeCamp,Changed Challenge Complete Tweet Auto Text: Fix for #49,CLOSED,2015-01-24T18:13:53Z,True,False,2015-01-28T20:08:47Z,,0,1,0,2,2,"**Change 1:**
+I added the FreeCodeCamp Twitter username as well as the ""Related"" parameter to the auto tweet text.
 
-Also changed Story.find to Story.findOne because if you clicked on a link like ""/stories/google"" and there was a ""/stories/google-1"" in the database Story.find would return both and end up sending the user to ""/stories/google"" then ""/stories/google-1"". The user would just see ""/stories/google-1"" since it happens so fast but you can see it in the cli.
+This changes the tweet text from:
 
-Since only 1 result should be returned anyway (`exports.returnIndividualStory`), I figured using findOne would be appropriate.
+I just NUKED Free Code Camp Challenge #6: Use jQuery for Styling http://freecodecamp.com/challenges/12  #learntocode #javascript
 
-Quick question: What Is the reason for find using regex on the Story.find?:
- `Story.find({'storyLink' : new RegExp(storyName, 'i')}, function(err, story) {`
+to:
+
+I just NUKED @FreeCodeCamp Challenge #6: Use jQuery for Styling http://freecodecamp.com/challenges/12 #learntocode #javascript
+
+---
+
+**Change 2:**
+Also added the ""Related accounts"" parameter as per https://dev.twitter.com/web/intents
+
+Which gives Tweet poster an opportunity by Twitter to follow the FreeCodeCamp Twitter account if they haven't done so already done so. Poster's that already follow the FCC account will not see this option.
+
+---
+
+**To test:**
+Unfollow FCC on Twitter, 
+complete a challenge ,
+Tweet about challenge completion
+
+Expected result:
+1) FreeCodeCamp Username in tweet
+2) After tweeting opportunity to follow FCC account
 "
-freeCodeCamp/freeCodeCamp,On story submission create unique story URL if slug already exists FIX,CLOSED,2015-03-31T21:36:27Z,True,False,2015-04-22T00:32:43Z,,0,1,2,1,1,"#283 #291
+freeCodeCamp/freeCodeCamp,Use should.eql to compare arrays,MERGED,2015-01-28T23:35:22Z,True,True,2015-01-29T02:57:40Z,2015-01-29T02:57:40Z,0,2,1,2,2,"When trying to pass the  ""Return Largest Numbers in Arrays"" challenge, I seem to be unable to pass the provided tests. I'm not familiar with Chai, but it would seem that we need to switch to .eql rather than === or should.equal when comparing two arrays to deeply compare the values rather than comparing objects.
 "
-freeCodeCamp/freeCodeCamp,having the text for showing streak should be fine. ,CLOSED,2015-04-01T03:57:02Z,True,False,2015-04-15T06:42:14Z,,0,3,2,1,1,"Nothing can fix the heatmap graphic. I tried setting HTML attributes:
+freeCodeCamp/freeCodeCamp,Update bonfires.json with two new challenges,CLOSED,2015-01-29T06:27:28Z,True,False,2015-02-06T04:32:09Z,,0,2,2,0,0,"Diff Two Arrays: Compare two arrays and return a new array with any items not found in both of the original arrays.
 
-> **Notes**
-> When [_Element_.setAttribute() is] called on an HTML element in an HTML document, setAttribute lower-cases its attribute name argument.
-
-[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
-
-However I think just having the streaks visible should be ok. No harm in that.
+Word Search Puzzle: Write a function that accepts a randomized 8 x 7 capital letter grid in the form of a string with line breaks and one space between each letter column as the first argument and a 3 to 7 letter string as the second argument. The second argument is hidden in horizontal, vertical, or diagonal view somewhere within the grid. Your job is to return the coordinates (Row, Column) of the second argument in an array.
 "
-freeCodeCamp/freeCodeCamp,Issue #277 Fix- coursewares chai-jquery test issue,MERGED,2015-04-06T14:04:11Z,True,True,2015-04-15T06:43:38Z,2015-04-15T06:43:38Z,0,3,2,11,11,"Should address #277 : The tests were not catching correct color attrs for the CSS challenges.
-
-Going forward - reason seems to be that jquery's .css() returns the _computed_ value for colors - i.e. it's running the tests using rgb(255, 0, 0) instead of ""red"" or hex values. It's also very picky and does want the spaces after the commas - rgb(255,0,0) does not work. (The docs used to say that you can use strings/hex; they have since been corrected.)
-
-http://api.jquery.com/css/#css1
-
-I also changed another test that was looking for ""monospace"" as the font degradation, but the instructions said to use ""Serif."" (Specify how fonts should degrade)
-
-I tested them on my computer and they seemed to work just fine. 
+freeCodeCamp/freeCodeCamp,Add Cash Register Challenge,CLOSED,2015-01-29T07:15:54Z,True,False,2015-02-06T04:33:30Z,,0,3,5,0,0,"Design a cash register drawer function that accepts purchase price as the first argument, payment as the second argument, and cash-in-drawer (cid) as the third argument. cid is a 2d array listing available currency. Return the string ""Insufficient Funds"" if change due is less than the cash-in-drawer. Return the string ""Closed"" if cash-in-drawer is equal to the change due. Otherwise, return change in coin and bills, sorted in highest to lowest order.
 "
-freeCodeCamp/freeCodeCamp,New feature to allow users to easily pair with each other,CLOSED,2015-04-07T07:16:01Z,True,False,2015-04-22T02:27:44Z,,0,4,6,2524,2524,"Adds a feature to allow users to easily pair for live coding. They can create a status and be visibly available. When someone wants to pair up they can click on the users post and instantly be put into a gitter chat with that person.
+freeCodeCamp/freeCodeCamp,update bonfire URL on regex match if incomplete url,MERGED,2015-01-31T01:45:17Z,True,True,2015-02-01T01:34:52Z,2015-02-01T01:34:52Z,0,2,0,0,0,
+freeCodeCamp/freeCodeCamp,Fixed routing if a user types bonfires/,CLOSED,2015-02-04T03:17:39Z,True,False,2015-02-04T05:39:54Z,,0,1,0,2,2,"Fixes a bug where if a user types www.freecodecamp.com/bonfires/ the server was taking them to /bonfires/bonfires/_challenge_ 
+"
+freeCodeCamp/freeCodeCamp,Update README with mongo server instructions,MERGED,2015-02-05T04:46:06Z,True,True,2015-02-06T17:01:03Z,2015-02-06T17:01:03Z,0,2,2,0,0,
+freeCodeCamp/freeCodeCamp,Fix typo in Bonfire Challenge,MERGED,2015-02-05T22:22:54Z,True,True,2015-02-06T02:06:36Z,2015-02-06T02:06:36Z,0,2,0,1,1,"Challenge id:  a3566b1109230028080c9345
+"
+freeCodeCamp/freeCodeCamp,Fix typos,MERGED,2015-02-09T16:18:14Z,True,True,2015-02-11T17:19:25Z,2015-02-11T17:19:25Z,0,2,0,89,89,"The only none obvious fix was this one: 'Lobster' to ""Lobster"" with double quotes for consistency. The first reference to Lobster was with single quotes and the next challenge had them in double quotes.
+"
+freeCodeCamp/freeCodeCamp,Add 18 new bonfire challenges,MERGED,2015-02-10T05:29:29Z,True,True,2015-02-13T13:54:05Z,2015-02-13T13:54:05Z,0,2,0,0,0,"Finders Keepers
+Where art thou
+Chunky Monkey
+Falsey Bouncer
+Slasher Flick
+Drop it like its hot
+Steamroller
+Seek and Destroy
+Where do I belong?
+Sorted Union
+Symmetric Difference
+Everything Be True
+Boo who?
+Confirm the Ending
+Convert HTML Entities
+Spinal-Tap-Case
+Repeat a string repeat a string
+Truncate a string
+"
+freeCodeCamp/freeCodeCamp,Check for Palindromes: Removed redundancy from description,MERGED,2015-02-11T06:22:56Z,True,True,2015-02-11T16:36:18Z,2015-02-11T16:36:18Z,0,2,0,3,3,"@QuincyLarson @terakilobyte Not sure if this was intended.
+"
+freeCodeCamp/freeCodeCamp,Fix a typo in README,MERGED,2015-02-11T19:49:05Z,True,True,2015-02-13T05:13:23Z,2015-02-13T05:13:23Z,0,2,0,1,1,
+freeCodeCamp/freeCodeCamp,Added Moment.js library and time logic to next Live session,MERGED,2015-02-12T07:09:53Z,True,True,2015-02-13T04:44:27Z,2015-02-13T04:44:27Z,0,2,2,1,1,
+freeCodeCamp/freeCodeCamp,Typos,MERGED,2015-02-12T12:10:05Z,True,True,2015-02-12T16:19:45Z,2015-02-12T16:19:45Z,0,2,0,6,6,
+freeCodeCamp/freeCodeCamp,Typos,CLOSED,2015-02-12T13:03:50Z,True,False,2015-02-14T11:38:59Z,,0,2,2,33,33,
+freeCodeCamp/freeCodeCamp,Typos,MERGED,2015-02-14T05:49:04Z,True,True,2015-02-14T11:33:07Z,2015-02-14T11:33:07Z,0,2,0,33,33,"Tested. Everything appears working.
+"
+freeCodeCamp/freeCodeCamp,Fixed grammar,CLOSED,2015-02-14T14:21:45Z,True,False,2015-02-15T07:40:43Z,,0,2,2,2,2,"Removed ""be"" to make the sentence more ""grammatically correct"".
+"
+freeCodeCamp/freeCodeCamp,Bonfire typos fixes,CLOSED,2015-02-14T22:09:12Z,True,False,2015-02-15T01:39:32Z,,0,2,0,9,9,
+freeCodeCamp/freeCodeCamp,Bonfire fixes,MERGED,2015-02-15T01:58:15Z,True,True,2015-02-15T07:36:22Z,2015-02-15T07:36:22Z,0,2,0,2,2,
+freeCodeCamp/freeCodeCamp,Ramda fire,CLOSED,2015-02-16T05:52:10Z,True,False,2015-02-16T20:23:46Z,,0,1,0,2,2,"Added ramda to bonfire
+"
+freeCodeCamp/freeCodeCamp,Fix 'Cash Register' bonfire bug. Closes #103,MERGED,2015-02-16T07:03:31Z,True,True,2015-02-16T15:23:02Z,2015-02-16T15:23:02Z,0,2,0,1,1,
+freeCodeCamp/freeCodeCamp,Fix 'Inventory Update' bonfire. Closes #105,MERGED,2015-02-16T16:37:25Z,True,True,2015-02-17T20:36:15Z,2015-02-17T20:36:15Z,0,2,0,8,8,
+freeCodeCamp/freeCodeCamp,Ux improvements,MERGED,2015-02-20T00:34:12Z,True,True,2015-02-20T02:14:44Z,2015-02-20T02:14:44Z,0,1,0,152,152,
+freeCodeCamp/freeCodeCamp,Ramda fire,MERGED,2015-02-21T06:07:41Z,True,True,2015-02-21T09:19:16Z,2015-02-21T09:19:16Z,0,2,0,2,2,"Incorporate latest version of ramda into bonfire.
+"
+freeCodeCamp/freeCodeCamp,Flip windows and mac gitter links,MERGED,2015-02-22T15:07:23Z,True,True,2015-02-22T20:45:11Z,2015-02-22T20:45:11Z,0,3,0,2,2,
+freeCodeCamp/freeCodeCamp,change for OSX env setting in README.md,CLOSED,2015-02-24T03:01:34Z,True,False,2015-02-24T16:12:25Z,,0,2,2,1,1,"added gulp prerequisite / added comment about mongo and use freecodecamp.
+added instructions to help mac user understand where setenv changes should be made and how to perform these changes.
+added comments about getting GOOGLE_ID app key
+"
+freeCodeCamp/freeCodeCamp,Update bonfire challenge description,MERGED,2015-02-24T03:38:02Z,True,True,2015-02-26T07:42:20Z,2015-02-26T07:42:20Z,0,2,0,1,1,"Clarified the description on the Return Largest Numbers in Arrays challenge.
+"
+freeCodeCamp/freeCodeCamp,update description on Union Sort bonfire challenge for clarity,MERGED,2015-02-24T18:23:06Z,True,True,2015-02-26T07:42:47Z,2015-02-26T07:42:47Z,0,2,0,0,0,"Added a sentence for clarity on sorted union bonfire.
 
-This was done with the help of @aldraco Either of us can be contacted with questions or for an explanation. 
+(The previous commit is simply me updating my local copy to match the master here.)
 "
-freeCodeCamp/freeCodeCamp,We're ready to move to slack from gitter thanks to @storbeck,MERGED,2015-04-09T05:53:50Z,True,True,2015-04-09T17:50:06Z,2015-04-09T17:50:06Z,0,1,0,8,8,
-freeCodeCamp/freeCodeCamp,Update README.md with better contribution directions. Point to AirBnB st...,MERGED,2015-04-15T07:07:19Z,True,True,2015-04-19T05:38:56Z,2015-04-19T05:38:56Z,0,1,0,8,8,"...yleguide. (closes #307)
+freeCodeCamp/freeCodeCamp,Fixup Map the Debris,CLOSED,2015-02-25T18:42:11Z,True,False,2015-03-03T08:11:25Z,,0,3,4,7,7,"Units were missing, calculated values do not match results using constants for Earth's Radius, Earth's Mass, and the Gravitational Constant G from Wikipedia.
 "
-freeCodeCamp/freeCodeCamp,Attempt to fix wording on seek and destroy bonfire issue #293,MERGED,2015-04-15T07:59:33Z,True,True,2015-04-22T02:28:14Z,2015-04-22T02:28:14Z,0,3,0,2,2,
-freeCodeCamp/freeCodeCamp,Ux improvements,MERGED,2015-04-17T04:54:33Z,True,True,2015-04-17T06:00:58Z,2015-04-17T06:00:58Z,0,4,0,411,411,"Appears stable.
+freeCodeCamp/freeCodeCamp,Fixed expected answer for third test on Pairwise bonfire.,MERGED,2015-03-06T05:34:51Z,True,True,2015-03-07T12:05:51Z,2015-03-07T12:05:51Z,0,3,4,3,3,"For the case of `arr = [0,0,0,0,1,1]`, and `arg = 1`, every element in `arr` can be added to another to sum to one. Therefore, the answer should be `0 + 1 + 2 + 3 + 4 + 5 = 15`.
 "
-freeCodeCamp/freeCodeCamp,new Pair Code feature PR to ux-improvements instead of master,CLOSED,2015-04-17T15:28:29Z,True,False,2015-04-22T02:06:55Z,,0,3,5,2425,2425,"took out gitter and adding slack integration.
+freeCodeCamp/freeCodeCamp,Update README.md,MERGED,2015-03-06T22:09:47Z,True,True,2015-03-07T06:06:14Z,2015-03-07T06:06:14Z,0,1,1,0,0,"Closes issue #152
+"
+freeCodeCamp/freeCodeCamp,Altered Cash Register,MERGED,2015-03-09T03:30:42Z,True,True,2015-03-10T05:44:44Z,2015-03-10T05:44:44Z,0,4,1,1,1,"I altered the Cash Register bonfire description for better clarity, and fixed a typo.
+"
+freeCodeCamp/freeCodeCamp,"""Update my public portfolio"" button fix",MERGED,2015-03-09T09:41:14Z,True,True,2015-03-09T21:47:08Z,2015-03-09T21:47:08Z,0,2,1,5,5,"""Update my public portfolio"" button was appearing on all account pages.
+"
+freeCodeCamp/freeCodeCamp,User validation and meta description,CLOSED,2015-03-09T09:48:46Z,True,False,2015-03-09T23:20:22Z,,0,1,0,461,461,"Added user validation on the server. Added html sanitizing for all user input into news. Added og:image and meta description scraping for automatic inclusion in posts from resources that provide such details.
+"
+freeCodeCamp/freeCodeCamp,"""challengeName is not defined"" fix",MERGED,2015-03-09T09:49:54Z,True,True,2015-03-09T20:08:11Z,2015-03-09T20:08:11Z,0,2,0,2,2,"Was getting this error in Firefox and Chrome: Uncaught ReferenceError: challengeName is not defined
+"
+freeCodeCamp/freeCodeCamp,Pointer on upvote button and reply button mouseover,MERGED,2015-03-09T21:18:38Z,True,True,2015-03-10T05:46:00Z,2015-03-10T05:46:00Z,0,2,0,0,0,"Fixes #175
+"
+freeCodeCamp/freeCodeCamp,Hide codeEditor textarea to prevent flash,MERGED,2015-03-09T22:40:52Z,True,True,2015-03-10T05:52:03Z,2015-03-10T05:52:03Z,0,2,0,1,1,"Fixes #176.
 
-We are not able to embed a slack chat due to cross scripting restrictions from slack.
-
-We could add the bot integration, but for now the user is able to add details and other users can see their slack handle to find them.
+Hide #codeEditor textarea so it won't flash when code mirror hides it.
 "
-freeCodeCamp/freeCodeCamp,Added the option to edit a comment for up to 10 minutes - for issue #211,MERGED,2015-04-18T06:56:13Z,True,True,2015-04-20T02:22:55Z,2015-04-20T02:22:55Z,0,3,1,4,4,"https://github.com/FreeCodeCamp/freecodecamp/issues/211
+freeCodeCamp/freeCodeCamp,Gitter chat embed fix,MERGED,2015-03-10T22:43:37Z,True,True,2015-03-12T05:33:39Z,2015-03-12T05:33:39Z,0,3,5,0,0,"Added https://*.gitter.im to 'frameSrc' CSP
 
-This should complete and close this issue. If a users post is less than 10 minutes old and belongs to them there will appear an edit button next to the reply button. 
+Fixes #182 
 "
-freeCodeCamp/freeCodeCamp,Rewrite the Symmetric Difference Bonfire description,CLOSED,2015-04-21T20:03:18Z,True,False,2015-04-22T02:31:00Z,,0,2,1,2,2,"This bonfire was very hard for me to understand so I tried to rewrite the description.
+freeCodeCamp/freeCodeCamp,Next courseware flow,MERGED,2015-03-11T15:06:28Z,True,True,2015-03-12T05:35:23Z,2015-03-12T05:35:23Z,0,3,1,5,5,"Closes issue #186 
 "
-freeCodeCamp/freeCodeCamp,Format and prettify bonfire solutions on portfolio page #332 FIX,CLOSED,2015-04-22T05:19:41Z,True,False,2015-04-24T03:23:18Z,,0,1,1,2,2,"Here it is.  I did my best to change as little as possible outside the account page.  The prettify theme can also be easily changed.
+freeCodeCamp/freeCodeCamp,Allow quotation marks,MERGED,2015-03-11T23:24:17Z,True,True,2015-03-12T06:06:35Z,2015-03-12T06:06:35Z,0,3,0,12,12,"Closes #189 .
+This PR builds on #188 and uses it as a base. It should be merged after that one to ensure automatic issue closing by reference.
 "
-freeCodeCamp/freeCodeCamp,Fix for issue #349: Zipline Copy Typo,MERGED,2015-04-23T21:14:06Z,True,True,2015-04-23T22:48:17Z,2015-04-23T22:48:17Z,0,2,1,1,1,"Fix for issue #349.
-"
-freeCodeCamp/freeCodeCamp,"Fix for issue #342: ""You can contribute to our field guide here"" Page No...",MERGED,2015-04-23T21:32:07Z,True,True,2015-04-23T22:49:16Z,2015-04-23T22:49:16Z,0,2,1,1,1,"...t Found
+freeCodeCamp/freeCodeCamp,Codemirror multiline indent fix,CLOSED,2015-03-14T05:10:52Z,True,False,2015-03-14T07:53:36Z,,0,0,1,2,2,"Default indent was being overwritten. Now adds spaces if text is already selected. 
 
-The old link pointed to another branch.  Updated to point at master.
+Fixes #196.
 "
-freeCodeCamp/freeCodeCamp,Update README.md,MERGED,2015-04-23T22:54:40Z,True,True,2015-04-24T00:52:20Z,2015-04-24T00:52:20Z,0,2,0,11,11,"Update README for more detailed instructions on how to contribute.
+freeCodeCamp/freeCodeCamp,Fixed bonfire selected tab bug,CLOSED,2015-03-14T07:39:50Z,True,False,2015-03-14T21:27:15Z,,0,3,1,9,9,"If you selected text in a bonfire and pressed tab it would delete the text instead of tabbing.
+Closes https://github.com/FreeCodeCamp/freecodecamp/issues/196
 "
-freeCodeCamp/freeCodeCamp,Several UX fixes and a www redirect bug fix,CLOSED,2015-04-24T10:06:05Z,True,False,2015-04-24T23:15:21Z,,0,2,0,260,260,
-freeCodeCamp/freeCodeCamp,Site speed,MERGED,2015-04-24T19:47:44Z,True,True,2015-04-24T23:02:16Z,2015-04-24T23:02:16Z,0,1,0,190,190,"I've refactored the resources.js controller to respond faster by caching the results of most of the utility functions that get id and name info for our content. 
+freeCodeCamp/freeCodeCamp,Challenge point save fix.,CLOSED,2015-03-14T08:23:38Z,True,False,2015-03-14T20:25:33Z,,0,1,1,11,11,"Fix for #194.
 
-Controllers have been refactored to separate the return from mongo from the data used further down in the functions. 
+Completing a Challenge was resetting user.points to the total number of Challenges completed causing Bonfire points to be discarded.
 
-The sitemap function in resources has been heavily refactored. Returning all users from the database is a massive network request and was blocking the server. The async.js library has been used in favor of repeatedly nested callbacks to make things easier to read.
-
-The privacy route has been restored and permanently redirects to the correct field-guide.
-
-Minor format changes in code for readability as well as linting cleanup to unify style.
-
-Update Make a Person bonfire for more detailed instructions, closes #336
+user.challengesCompleted wasn't being used so I updated the code to use it to track completed Challenges. I'm not sure if I went the best way using it though. I copied the user.challengesHash setting to mirror the challenges since I didn't want to mess with code that was already being used. So whenever you add a new Challenge in the future you will need to add the same to challengesCompleted.
 "
-freeCodeCamp/freeCodeCamp,slight tidy and example,MERGED,2015-04-24T19:49:43Z,True,True,2015-04-25T03:58:32Z,2015-04-25T03:58:32Z,0,4,2,2,2,"Replaced one occurrence of gitter with slack and added an example bit torrent client after someone pointed out in the help section that there was not guide to demonstrate how to do so.
+freeCodeCamp/freeCodeCamp,Remove bower_components from source and use bower.json,CLOSED,2015-03-14T08:33:58Z,True,False,2015-03-18T18:19:25Z,,0,4,5,384111,384111,"Use `bower install` to install bower components.
 "
-freeCodeCamp/freeCodeCamp,Fixes #352 - Camper News email notification,MERGED,2015-04-25T14:15:46Z,True,True,2015-04-26T02:00:40Z,2015-04-26T02:00:40Z,0,3,0,36,36,"The logic behind the Camper News email notifications now fits these requirements:
+freeCodeCamp/freeCodeCamp,Dev server crash fix,MERGED,2015-03-14T23:19:40Z,True,True,2015-03-18T03:10:30Z,2015-03-18T03:10:30Z,0,3,7,4,4,"Fix for #199.
 
-> - As a person who posted the story, I want to receive a notification when someone comments on it.
-> - As a person who comments on a story, I want to receive a notification if someone replies to my comment.
-> - As a person receiving such a notification email, I can see who commented and click a link to go directly to the story.
+Checks that the request returned a 200. API fails return 400/401.
+
+**THIS NEEDS TO BE TESTED WITH REAL API KEYS. I don't have any.**
 "
-freeCodeCamp/freeCodeCamp,Bug fixes to stories and fieldguides,MERGED,2015-04-25T16:29:47Z,True,True,2015-04-26T01:14:43Z,2015-04-26T01:14:43Z,0,2,0,18,18,"Closes #366 
-Closes #367 
+freeCodeCamp/freeCodeCamp,Upvote fix,MERGED,2015-03-17T07:24:26Z,True,True,2015-03-17T22:48:15Z,2015-03-17T22:48:15Z,0,3,1,4,4,"https://github.com/FreeCodeCamp/freecodecamp/issues/210
+
+It now checks if the user has voted or not. If they have voted the up arrow will not be rendered. If they have not voted nothing will change.
+
+If the upvote arrow is clicked it will now disappear as well as send the upvote to the servers.
+
+The existing code can be modified to instead change the asset or some other function.
 "
-freeCodeCamp/freeCodeCamp,Usability improvements and courseware/field-guide copy improvements,CLOSED,2015-04-27T07:34:13Z,True,False,2015-04-30T20:18:39Z,,0,1,0,742,742,
-freeCodeCamp/freeCodeCamp,Twitter API endpoint for Zipline/Codepen,CLOSED,2015-04-29T13:59:11Z,True,False,2015-04-30T20:16:31Z,,0,4,2,2,2,"New Dependencies:
-- twitter application TWITTER_TOKEN and TWITTER_TOKEN_SECRET should be added to .env.
+freeCodeCamp/freeCodeCamp,Fix no user comment display,CLOSED,2015-03-17T08:46:49Z,True,False,2015-03-17T20:03:07Z,,0,1,3,11,11,
+freeCodeCamp/freeCodeCamp,Fix no user comment display,MERGED,2015-03-17T20:05:28Z,True,True,2015-03-17T22:12:34Z,2015-03-17T22:16:16Z,0,3,2,11,11,"Now comparing author id against userid
+"
+freeCodeCamp/freeCodeCamp,fullUser fixes,MERGED,2015-03-18T02:12:37Z,True,True,2015-03-18T03:16:40Z,2015-03-18T03:16:40Z,0,1,2,2,2,"Set to null if user isn't logged in.
 
-Usage:
-Campers can make a simple $.ajax call to freecodecamp.com/api/codepen/twitter/:screenName and a JSON with the ten most recent tweets from either :screenName or FreeCodeCamp will be returned. No XSS issues w/ codepen.
+`delete fullUser.password;` wasn't deleting the password so setting it to null instead.
+"
+freeCodeCamp/freeCodeCamp,Stories js var double output fix,MERGED,2015-03-18T02:20:08Z,True,True,2015-03-18T03:27:40Z,2015-03-18T03:27:40Z,0,1,1,2,2,"challengeName and user are in stories/index.jade and stories/show.jade.
 
-I also added room for other API calls for similar usage in codepen - twitch, slack, and possibly a tweet stream - which I can add later if approved, or remove if not.
+show.jade is only called from index.jade. This fix removes double output of those vars.
+"
+freeCodeCamp/freeCodeCamp,"App ""listens"" before 'MongoStore' is ready fix",CLOSED,2015-03-18T03:19:50Z,True,False,2015-03-18T06:20:36Z,,0,2,17,11,11,"fix for #224 
+"
+EbookFoundation/free-programming-books,Adding djangobook.com for django section,CLOSED,2013-10-11T18:30:00Z,True,False,2013-10-11T21:10:13Z,,0,2,1,0,0,
+EbookFoundation/free-programming-books,Update free-programming-books.md,MERGED,2013-10-11T18:54:41Z,True,True,2013-10-11T20:01:47Z,2013-10-11T20:01:47Z,0,2,0,1,1,"corrected HTML / CSS link
+"
+EbookFoundation/free-programming-books,linux and go,MERGED,2013-10-11T21:40:16Z,True,True,2013-10-12T08:31:51Z,2013-10-12T08:31:51Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Adding Exploringelasticsearch / Elasticsearch category,MERGED,2013-10-11T21:51:42Z,True,True,2013-10-12T08:24:25Z,2013-10-12T08:24:25Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Add Learn CSS Layout (http://learnlayout.com/),MERGED,2013-10-11T21:53:39Z,True,True,2013-10-12T08:24:44Z,2013-10-12T08:24:44Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Fix link to Compiler Construction,MERGED,2013-10-11T22:06:56Z,True,True,2013-10-12T08:25:05Z,2013-10-12T08:25:05Z,0,2,0,1,1,
+EbookFoundation/free-programming-books,Adding Racket,MERGED,2013-10-11T22:20:52Z,True,True,2013-10-12T08:25:26Z,2013-10-12T08:25:26Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,added Objects on Rails,MERGED,2013-10-11T22:58:34Z,True,True,2013-10-12T08:25:42Z,2013-10-12T08:25:42Z,0,2,0,0,0,"added Avdi's Objects on Rails [ebook](http://objectsonrails.com/)
+"
+EbookFoundation/free-programming-books,added High-Performance Browser Networking,MERGED,2013-10-11T23:08:47Z,True,True,2013-10-12T08:32:15Z,2013-10-12T08:32:15Z,0,2,1,0,0,"added link to http://chimera.labs.oreilly.com/books/1230000000545/index.html
+"
+EbookFoundation/free-programming-books,"Added 5 books, managed sections Java and Hadoop",MERGED,2013-10-11T23:16:24Z,True,True,2013-10-12T08:35:10Z,2013-10-12T08:35:10Z,0,2,0,6,6,
+EbookFoundation/free-programming-books,AI book added for Java,MERGED,2013-10-11T23:22:39Z,True,True,2013-10-12T08:37:26Z,2013-10-12T08:37:26Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,"Add Parallel and Concurrent Programming in Haskell, and YAHT ",MERGED,2013-10-12T00:28:13Z,True,True,2013-10-12T08:28:48Z,2013-10-12T08:28:48Z,0,2,0,0,0,"(YAHT == Yet Another Haskell Tutorial)
+"
+EbookFoundation/free-programming-books,Fixing C/C++ Link,MERGED,2013-10-12T01:42:44Z,True,True,2013-10-12T08:28:59Z,2013-10-12T08:28:59Z,0,2,7,1,1,"as title says
+"
+EbookFoundation/free-programming-books,Update Vim Recipes Link,MERGED,2013-10-12T02:06:10Z,True,True,2013-10-12T08:29:15Z,2013-10-12T08:29:15Z,0,2,0,1,1,"The old link goes to an expired domain. This new link will take you to a PDF download.
+"
+EbookFoundation/free-programming-books,Removed non-free book,MERGED,2013-10-12T02:58:12Z,True,True,2013-10-12T08:40:35Z,2013-10-12T08:40:35Z,0,2,0,1,1,
+EbookFoundation/free-programming-books,divided #Language Agnostic to multiple disciplines,CLOSED,2013-10-12T03:39:55Z,True,False,2013-10-12T09:22:43Z,,0,2,0,50,50,"this needs further refinement
+"
+EbookFoundation/free-programming-books,Harel books,MERGED,2013-10-12T04:17:52Z,True,True,2013-10-12T08:30:34Z,2013-10-12T08:30:34Z,0,2,0,0,0,"links to two of [David Harel's](http://www.wisdom.weizmann.ac.il/~harel/papers.html) books, on Statecharts and LSCs, as hosted on scribd
+"
+EbookFoundation/free-programming-books,Adds GA Dash,MERGED,2013-10-12T05:12:19Z,True,True,2013-10-12T08:47:15Z,2013-10-12T08:47:15Z,0,2,0,0,0,"[Dash](http://dash.generalassemb.ly) is a new site that I'm working on to teach HTML and CSS. Try it out and merge if you like it!
+"
+EbookFoundation/free-programming-books,"Added F#, Oberon and OCaml books",MERGED,2013-10-12T06:34:05Z,True,True,2013-10-12T08:31:02Z,2013-10-12T08:31:02Z,0,2,0,0,0,"I added 3 free books on F#, OCaml and Oberon.
+"
+EbookFoundation/free-programming-books,Added Machine Learning Books,MERGED,2013-10-12T12:54:01Z,True,True,2013-10-15T11:15:41Z,2013-10-15T11:15:41Z,0,4,1,0,0,
+EbookFoundation/free-programming-books,Added Open Data Structures to ####Algorithms & Datastructures.,MERGED,2013-10-12T13:59:10Z,True,True,2013-10-12T15:52:39Z,2013-10-12T15:52:39Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,"Add Jan Newmarch's ""Network Programming in Go""",MERGED,2013-10-12T22:19:31Z,True,True,2013-10-13T08:18:51Z,2013-10-13T08:18:51Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added link to Eijkhout's Intro to HPC,MERGED,2013-10-12T22:33:42Z,True,True,2013-10-13T08:19:05Z,2013-10-13T08:19:05Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,"Added link to ""The Bastards Book of Ruby""",MERGED,2013-10-12T22:56:07Z,True,True,2013-10-13T08:19:38Z,2013-10-13T08:19:38Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added Git internals,MERGED,2013-10-13T00:22:49Z,True,True,2013-10-13T08:20:25Z,2013-10-13T08:20:25Z,0,2,0,0,0,"Added git internals book to Git section
+"
+EbookFoundation/free-programming-books,Added subcategory for Backbone.js and a link for 'Developing Backbone.js...,MERGED,2013-10-13T01:22:20Z,True,True,2013-10-15T11:09:58Z,2013-10-15T11:09:58Z,0,2,1,5,5,"... Applications'
+
+Also alphabetized the subcategories under Javascript, now that there are three. Made the adjustment in the table of contents as well.
+"
+EbookFoundation/free-programming-books,Fixed a broken link.,MERGED,2013-10-11T16:55:40Z,True,True,2013-10-11T16:57:25Z,2013-10-11T16:57:25Z,0,2,1,1,1,"I'm not 100% sure that this is the same book, but I tried to find something I thought was similar.
+"
+EbookFoundation/free-programming-books,"removed ""the django book"" links",MERGED,2013-10-11T16:59:00Z,True,True,2013-10-11T17:00:29Z,2013-10-11T17:00:29Z,0,2,1,2,2,"the django book is extremely out of date. I'll find some better free django books but until then removal is best
+"
+EbookFoundation/free-programming-books,Update free-programming-books.md,MERGED,2013-10-11T17:15:36Z,True,True,2013-10-11T17:17:32Z,2013-10-11T17:17:32Z,0,2,0,1,1,"Fixed .NET (C# / VB / Nemerle / Visual Studio) anchor link.
+"
+EbookFoundation/free-programming-books,Added another free e-book,MERGED,2013-10-11T17:37:14Z,True,True,2013-10-11T17:40:02Z,2013-10-11T17:40:02Z,0,2,1,0,0,"Added my published book ""97 Things Every Programmer Should Know - Extended"" from LeanPub, which is available for free download.
+"
+EbookFoundation/free-programming-books,add gobyexample.com,MERGED,2013-10-11T17:42:29Z,True,True,2013-10-11T17:43:23Z,2013-10-11T17:43:23Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,"Added ""An Introduction to Programming in Go""",MERGED,2013-10-11T17:48:01Z,True,True,2013-10-11T17:48:45Z,2013-10-11T17:48:45Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added Python for you and me under Python,MERGED,2013-10-11T18:06:48Z,True,True,2013-10-11T18:10:19Z,2013-10-11T18:10:19Z,0,2,0,2,2,
+EbookFoundation/free-programming-books,Added Python for Informatics,MERGED,2013-10-11T18:08:24Z,True,True,2013-10-11T18:10:03Z,2013-10-11T18:10:03Z,0,2,0,2,2,"An open sourced book written by Dr. Charles Severance, professor at MichUni. The book is available in every possible format, a really great read!
+"
+EbookFoundation/free-programming-books,Added book to free-programming-books.md,MERGED,2013-10-11T18:11:33Z,True,True,2013-10-11T18:14:59Z,2013-10-11T18:14:59Z,0,2,0,3,3,"Included free book by Oâ€™Reilly Media to JavaScript.
+"
+EbookFoundation/free-programming-books,"added ""Learning JavaScript Design Patterns"" by Addy Osmani",MERGED,2013-10-11T18:16:06Z,True,True,2013-10-11T18:23:16Z,2013-10-11T18:23:16Z,0,2,0,3,3,
+EbookFoundation/free-programming-books,Added two java programming books.,MERGED,2013-10-11T18:18:29Z,True,True,2013-10-11T18:24:13Z,2013-10-11T18:24:13Z,0,2,0,1,1,"Effective Java is one of the most purchased (and best) Java books of all time.
+"
+EbookFoundation/free-programming-books,Added one Rust book,MERGED,2013-10-11T18:23:54Z,True,True,2013-10-11T18:36:52Z,2013-10-11T18:36:52Z,0,2,2,0,0,
+EbookFoundation/free-programming-books,Adding djangobook.com for django section,CLOSED,2013-10-11T18:30:00Z,True,False,2013-10-11T21:10:13Z,,0,2,1,0,0,
+EbookFoundation/free-programming-books,Add Distributed Systems for fun and profit,MERGED,2013-10-11T18:49:17Z,True,True,2013-10-11T18:51:16Z,2013-10-11T18:51:16Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Update free-programming-books.md,MERGED,2013-10-11T18:54:41Z,True,True,2013-10-11T20:01:47Z,2013-10-11T20:01:47Z,0,2,0,1,1,"corrected HTML / CSS link
+"
+EbookFoundation/free-programming-books,Learn Vimscript the Hard Way,MERGED,2013-10-11T19:33:55Z,True,True,2013-10-11T20:01:31Z,2013-10-11T20:01:31Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added Category Theory for Computing Science.,MERGED,2013-10-11T20:10:52Z,True,True,2013-10-11T20:30:47Z,2013-10-11T20:30:47Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Add DTrace book from illumos,MERGED,2013-10-11T20:17:10Z,True,True,2013-10-11T20:31:03Z,2013-10-11T20:31:03Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Fix embedded Delphi / Pascal link,MERGED,2013-10-11T20:18:19Z,True,True,2013-10-11T20:31:17Z,2013-10-11T20:31:17Z,0,2,0,1,1,
+EbookFoundation/free-programming-books,Added three books,MERGED,2013-10-11T20:24:52Z,True,True,2013-10-11T20:31:48Z,2013-10-11T20:31:48Z,0,2,0,4,4,
+EbookFoundation/free-programming-books,update dead link to Emacs manual with new link,MERGED,2013-10-11T20:29:44Z,True,True,2013-10-11T20:32:02Z,2013-10-11T20:32:02Z,0,2,0,1,1,"Link to emacs manual is dead. Here is the new link.
+"
+EbookFoundation/free-programming-books,Adding in a section for D3.js ,MERGED,2013-10-11T21:07:28Z,True,True,2013-10-11T22:07:14Z,2013-10-11T22:07:14Z,0,2,0,0,0,"Adding in a section for D3.js with a link to ""Interactive Data Visualiza...tions for the Web"" by Scott Murray
+"
+EbookFoundation/free-programming-books,"adding graph databases, the little riak book and Another tour of Scala",MERGED,2013-10-11T21:19:09Z,True,True,2013-10-11T21:26:03Z,2013-10-11T21:26:03Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Adding Racket,CLOSED,2013-10-11T21:36:13Z,True,False,2013-10-11T21:40:30Z,,0,1,0,0,0,
+EbookFoundation/free-programming-books,linux and go,MERGED,2013-10-11T21:40:16Z,True,True,2013-10-12T08:31:51Z,2013-10-12T08:31:51Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Adding Racket language,CLOSED,2013-10-11T21:43:35Z,True,False,2013-10-11T22:03:48Z,,0,1,0,0,0,
+EbookFoundation/free-programming-books,Adding Exploringelasticsearch / Elasticsearch category,MERGED,2013-10-11T21:51:42Z,True,True,2013-10-12T08:24:25Z,2013-10-12T08:24:25Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Add Learn CSS Layout (http://learnlayout.com/),MERGED,2013-10-11T21:53:39Z,True,True,2013-10-12T08:24:44Z,2013-10-12T08:24:44Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Fix link to Compiler Construction,MERGED,2013-10-11T22:06:56Z,True,True,2013-10-12T08:25:05Z,2013-10-12T08:25:05Z,0,2,0,1,1,
+EbookFoundation/free-programming-books,Adding Racket,MERGED,2013-10-11T22:20:52Z,True,True,2013-10-12T08:25:26Z,2013-10-12T08:25:26Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,added Objects on Rails,MERGED,2013-10-11T22:58:34Z,True,True,2013-10-12T08:25:42Z,2013-10-12T08:25:42Z,0,2,0,0,0,"added Avdi's Objects on Rails [ebook](http://objectsonrails.com/)
+"
+EbookFoundation/free-programming-books,added High-Performance Browser Networking,MERGED,2013-10-11T23:08:47Z,True,True,2013-10-12T08:32:15Z,2013-10-12T08:32:15Z,0,2,1,0,0,"added link to http://chimera.labs.oreilly.com/books/1230000000545/index.html
+"
+EbookFoundation/free-programming-books,"Added 5 books, managed sections Java and Hadoop",MERGED,2013-10-11T23:16:24Z,True,True,2013-10-12T08:35:10Z,2013-10-12T08:35:10Z,0,2,0,6,6,
+EbookFoundation/free-programming-books,AI book added for Java,MERGED,2013-10-11T23:22:39Z,True,True,2013-10-12T08:37:26Z,2013-10-12T08:37:26Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,"Add Parallel and Concurrent Programming in Haskell, and YAHT ",MERGED,2013-10-12T00:28:13Z,True,True,2013-10-12T08:28:48Z,2013-10-12T08:28:48Z,0,2,0,0,0,"(YAHT == Yet Another Haskell Tutorial)
+"
+EbookFoundation/free-programming-books,Fixing C/C++ Link,MERGED,2013-10-12T01:42:44Z,True,True,2013-10-12T08:28:59Z,2013-10-12T08:28:59Z,0,2,7,1,1,"as title says
+"
+EbookFoundation/free-programming-books,Update Vim Recipes Link,MERGED,2013-10-12T02:06:10Z,True,True,2013-10-12T08:29:15Z,2013-10-12T08:29:15Z,0,2,0,1,1,"The old link goes to an expired domain. This new link will take you to a PDF download.
+"
+EbookFoundation/free-programming-books,Removed non-free book,MERGED,2013-10-12T02:58:12Z,True,True,2013-10-12T08:40:35Z,2013-10-12T08:40:35Z,0,2,0,1,1,
+EbookFoundation/free-programming-books,divided #Language Agnostic to multiple disciplines,CLOSED,2013-10-12T03:39:55Z,True,False,2013-10-12T09:22:43Z,,0,2,0,50,50,"this needs further refinement
+"
+EbookFoundation/free-programming-books,Harel books,MERGED,2013-10-12T04:17:52Z,True,True,2013-10-12T08:30:34Z,2013-10-12T08:30:34Z,0,2,0,0,0,"links to two of [David Harel's](http://www.wisdom.weizmann.ac.il/~harel/papers.html) books, on Statecharts and LSCs, as hosted on scribd
+"
+EbookFoundation/free-programming-books,Adds GA Dash,MERGED,2013-10-12T05:12:19Z,True,True,2013-10-12T08:47:15Z,2013-10-12T08:47:15Z,0,2,0,0,0,"[Dash](http://dash.generalassemb.ly) is a new site that I'm working on to teach HTML and CSS. Try it out and merge if you like it!
+"
+EbookFoundation/free-programming-books,"Added F#, Oberon and OCaml books",MERGED,2013-10-12T06:34:05Z,True,True,2013-10-12T08:31:02Z,2013-10-12T08:31:02Z,0,2,0,0,0,"I added 3 free books on F#, OCaml and Oberon.
+"
+EbookFoundation/free-programming-books,Added tutorial on Basic Android Setup.,MERGED,2013-10-12T08:53:46Z,True,True,2013-10-12T09:08:56Z,2013-10-12T09:08:56Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Lisp Web Tales By Pavel Penev,MERGED,2013-10-12T09:01:50Z,True,True,2013-10-12T09:06:38Z,2013-10-12T09:06:38Z,0,2,0,0,0,"http://lispwebtales.ppenev.com/
+"
+EbookFoundation/free-programming-books,added opengl resource,MERGED,2013-10-12T10:46:02Z,True,True,2013-10-12T10:47:14Z,2013-10-12T10:47:14Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added ASP.NET MVC Music Store link to ###ASP.NET MVC.,MERGED,2013-10-12T11:31:15Z,True,True,2013-10-12T11:49:00Z,2013-10-12T11:49:00Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added Machine Learning Books,MERGED,2013-10-12T12:54:01Z,True,True,2013-10-15T11:15:41Z,2013-10-15T11:15:41Z,0,4,1,0,0,
+EbookFoundation/free-programming-books,Added Open Data Structures to ####Algorithms & Datastructures.,MERGED,2013-10-12T13:59:10Z,True,True,2013-10-12T15:52:39Z,2013-10-12T15:52:39Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added reference to some free laravel (a popular PHP framework) resources,MERGED,2013-10-12T16:09:08Z,True,True,2013-10-12T16:10:13Z,2013-10-12T16:10:13Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,removed non-free C++ book.,MERGED,2013-10-12T16:25:45Z,True,True,2013-10-12T16:26:55Z,2013-10-12T16:26:55Z,0,1,0,1,1,
+EbookFoundation/free-programming-books,"Fix typo ""Getting started with Grails""",MERGED,2013-10-12T16:28:55Z,True,True,2013-10-12T16:38:08Z,2013-10-12T16:38:08Z,0,2,0,1,1,
+EbookFoundation/free-programming-books,Updated Mixu's Node Book since the author has moved it,MERGED,2013-10-12T17:02:32Z,True,True,2013-10-12T17:18:05Z,2013-10-12T17:18:05Z,0,2,0,1,1,
+EbookFoundation/free-programming-books,"Removed ""Ruby Best Practices""",MERGED,2013-10-12T17:50:12Z,True,True,2013-10-12T17:54:18Z,2013-10-12T17:54:18Z,0,2,1,1,1,"This is neither a book nor free.
+"
+EbookFoundation/free-programming-books,Update free-programming-books.md,MERGED,2013-10-12T18:58:36Z,True,True,2013-10-12T19:44:02Z,2013-10-12T19:44:02Z,0,2,1,0,0,"Added an entry for the processing programming language.
+"
+EbookFoundation/free-programming-books,Added some books,MERGED,2013-10-12T19:57:54Z,True,True,2013-10-12T20:15:17Z,2013-10-12T20:15:16Z,0,2,0,0,0,"Icon book (and heading), Joe Armstrong's thesis, Small Memory Software, Purely Functional Data Structures, OpenGL Insights
+"
+EbookFoundation/free-programming-books,"Add Jan Newmarch's ""Network Programming in Go""",MERGED,2013-10-12T22:19:31Z,True,True,2013-10-13T08:18:51Z,2013-10-13T08:18:51Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added link to Eijkhout's Intro to HPC,MERGED,2013-10-12T22:33:42Z,True,True,2013-10-13T08:19:05Z,2013-10-13T08:19:05Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,"Added link to ""The Bastards Book of Ruby""",MERGED,2013-10-12T22:56:07Z,True,True,2013-10-13T08:19:38Z,2013-10-13T08:19:38Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added Git internals,MERGED,2013-10-13T00:22:49Z,True,True,2013-10-13T08:20:25Z,2013-10-13T08:20:25Z,0,2,0,0,0,"Added git internals book to Git section
+"
+EbookFoundation/free-programming-books,Added subcategory for Backbone.js and a link for 'Developing Backbone.js...,MERGED,2013-10-13T01:22:20Z,True,True,2013-10-15T11:09:58Z,2013-10-15T11:09:58Z,0,2,1,5,5,"... Applications'
+
+Also alphabetized the subcategories under Javascript, now that there are three. Made the adjustment in the table of contents as well.
+"
+EbookFoundation/free-programming-books,Updated links to Dive Into HTML5,MERGED,2013-10-13T01:37:04Z,True,True,2013-10-13T08:22:23Z,2013-10-13T08:22:23Z,0,2,1,3,3,"1. Changed the link to the community-maintained web version of the book.
+
+> We work hard to add and update content, links, APIs, and actively maintain this fine resource; refreshing and reflecting the relevant and current state of HTML5, just as Mark Pilgrim did during his tenure
+1. Added a link to a PDF version of Dive Into HTML5.
+
+> The eBook has an embedded table of contents, working cross-references, well-placed page breaks and tons of others tiny tweaks and enhancements. 
+
+Both of these resources have been updated and enhanced and build upon the original work by Mark Pilgrim.
+
+It should be said that I did not hotlink to the PDF but instead linked to the page where the PDF can be downloaded.
+Mislav MarohniÄ‡, the person who prepared the PDF, made a great effort in doing so and he should be recognised for that. I think that the other PDF hotlinks should be substituted with links to the proper pages where the PDFs can be downloaded but I'll leave that up to others.
+"
+EbookFoundation/free-programming-books,Update free-programming-books.md,MERGED,2013-10-13T03:13:55Z,True,True,2013-10-13T08:23:29Z,2013-10-13T08:23:29Z,0,2,0,0,0,"Thought of a few more... kind of punted a bit categorizing them (LEDA isn't exactly language agnostic, for instance, though its ideas should be)
+"
+EbookFoundation/free-programming-books,Added Programming with gtkmm and GUI category,MERGED,2013-10-13T04:54:32Z,True,True,2013-10-15T11:10:15Z,2013-10-15T11:10:15Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,add javascript garden,MERGED,2013-10-13T05:19:19Z,True,True,2013-11-29T19:09:49Z,2013-11-29T19:09:49Z,0,3,0,0,0,
+EbookFoundation/free-programming-books,Added Django Book,CLOSED,2013-10-13T08:06:10Z,True,False,2013-10-13T08:18:34Z,,0,2,0,0,0,
+EbookFoundation/free-programming-books,"Adding books about Backbone, AngularJS, GIT",MERGED,2013-10-13T08:20:14Z,True,True,2013-10-15T10:09:12Z,2013-10-15T10:09:12Z,0,2,0,1,1,
+EbookFoundation/free-programming-books,"adding two link for ""Sage"", the mathematical software system",MERGED,2013-10-13T08:45:59Z,True,True,2013-10-13T10:56:46Z,2013-10-13T10:56:46Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,3 French books: on LaTeX and on Python,CLOSED,2013-10-13T11:19:53Z,True,False,2013-10-16T12:45:58Z,,0,2,5,1,1,
+EbookFoundation/free-programming-books,Added Scala School by Twitter,MERGED,2013-10-13T11:54:37Z,True,True,2013-10-13T11:55:44Z,2013-10-13T11:55:44Z,0,2,0,0,0,"Very good scala step-by-step guides from Twitter.
+"
+EbookFoundation/free-programming-books,Added Rosetta Code,CLOSED,2013-10-13T16:13:20Z,True,False,2013-10-13T20:00:56Z,,0,2,1,1,1,"Added Rosetta Code. It contains a list of Programming tasks and their solutions in more languages than one. Hope people will find this useful. :)
+"
+EbookFoundation/free-programming-books,Added 'Natural Language Processing for the Working Programmer',CLOSED,2013-10-13T16:24:04Z,True,False,2013-10-13T16:27:28Z,,0,1,0,0,0,
+EbookFoundation/free-programming-books,Added 'Haskell and Yesod',MERGED,2013-10-13T16:40:29Z,True,True,2013-10-13T20:00:30Z,2013-10-13T20:00:30Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added Cryptography chapter and 'Applied Cryptography',CLOSED,2013-10-13T16:40:52Z,True,False,2013-12-30T16:39:21Z,,0,3,2,0,0,
+EbookFoundation/free-programming-books,Added 'Natural Language Processing for the Working Programmer',MERGED,2013-10-13T16:41:12Z,True,True,2013-10-13T20:08:58Z,2013-10-13T20:08:58Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,"add theory section (vs algorithms or misc), seed with network theory book",CLOSED,2013-10-13T17:29:07Z,True,False,2013-10-13T17:33:11Z,,0,1,0,0,0,
+EbookFoundation/free-programming-books,"add theory section (vs algorithms or misc), seed with network theory book",MERGED,2013-10-13T17:34:42Z,True,True,2013-10-14T08:19:29Z,2013-10-14T08:19:29Z,0,2,3,0,0,
+EbookFoundation/free-programming-books,Add Flask tutorail,MERGED,2013-10-13T17:53:12Z,True,True,2013-10-13T20:03:42Z,2013-10-13T20:03:42Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,fix url,MERGED,2013-10-13T19:15:09Z,True,True,2013-10-13T20:05:03Z,2013-10-13T20:05:03Z,0,2,0,1,1,"update url
+"
+EbookFoundation/free-programming-books,fixed Perl 6 link in contents,MERGED,2013-10-13T19:56:12Z,True,True,2013-10-13T20:05:17Z,2013-10-13T20:05:17Z,0,2,0,1,1,
+EbookFoundation/free-programming-books,Professional Assembly Language book and Racket guide,MERGED,2013-10-13T22:01:46Z,True,True,2013-10-14T08:19:55Z,2013-10-14T08:19:55Z,0,3,1,0,0,"Assembly IA-32 by Richard Blum and Racket guide.
+"
+EbookFoundation/free-programming-books,Added Learn CF in a Week book link,MERGED,2013-10-13T22:16:04Z,True,True,2013-10-14T08:20:10Z,2013-10-14T08:20:10Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,More Lua books,MERGED,2013-10-13T23:50:28Z,True,True,2013-10-14T08:20:33Z,2013-10-14T08:20:33Z,0,2,0,0,0,"The official Lua 5.1 reference manual and ""Programming gems"" that is a great advanced book of Lua.
+"
+EbookFoundation/free-programming-books,Added Android Programming books.,MERGED,2013-10-14T00:25:04Z,True,True,2013-10-14T08:20:48Z,2013-10-14T08:20:48Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,"Added Ulrich Drepper's ""What Every Programmer Should Know About Memory""",MERGED,2013-10-14T02:36:18Z,True,True,2013-10-14T08:21:09Z,2013-10-14T08:21:09Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Few books from hackershelf.com,MERGED,2013-10-14T03:08:27Z,True,True,2013-10-14T11:38:02Z,2013-10-14T11:38:02Z,0,2,2,0,0,"More books coming
+"
+EbookFoundation/free-programming-books,Added 2 excellent R books,CLOSED,2013-10-14T03:26:15Z,True,False,2013-10-14T19:44:55Z,,0,2,2,0,0,"Added two excellent R resources from Charles DiMaggio at Columbia University's Mailman School of Public Health.
+"
+EbookFoundation/free-programming-books,Added Ada and JavaScript books,MERGED,2013-10-14T04:00:55Z,True,True,2013-10-14T08:23:50Z,2013-10-14T08:23:50Z,0,2,0,0,0,"Ada 95 by John English
+Ada Distilled by Richard Riehle
+Ada for Software Engineers by M. Ben-Ari
+JavaScript Bible by Danny Goodman
+
+(from the r/programming thread)
+"
+EbookFoundation/free-programming-books,Added LaTeX Wikibook,MERGED,2013-10-14T05:47:54Z,True,True,2013-10-14T08:24:01Z,2013-10-14T08:24:01Z,0,2,0,0,0,"The LaTeX Wikibook is my favourite reference for LaTeX and has lots of good examples.
+"
+EbookFoundation/free-programming-books,"add a new, and very excellent, R book",MERGED,2013-10-14T06:32:28Z,True,True,2013-10-14T08:24:17Z,2013-10-14T08:24:17Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Add IDL guide.,MERGED,2013-10-14T09:05:09Z,True,True,2013-10-14T11:36:47Z,2013-10-14T11:36:47Z,0,2,0,0,0,"IDL is language used on astronomy, but it is now being replaced by Python. I
+have added here the Getting Started with IDL.
+"
+EbookFoundation/free-programming-books,Added python books,MERGED,2013-10-14T09:55:53Z,True,True,2013-10-14T11:37:01Z,2013-10-14T11:37:01Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Remove broken link for F# Survival Guide,MERGED,2013-10-14T10:22:09Z,True,True,2013-10-14T11:37:12Z,2013-10-14T11:37:12Z,0,2,0,1,1,
+EbookFoundation/free-programming-books,"Add ""The Art of Assembly Language Programming"" book.",MERGED,2013-10-14T10:40:44Z,True,True,2013-10-14T11:37:25Z,2013-10-14T11:37:25Z,0,2,0,1,1,"Adding ""The Art of Assembly Language Programming"" by Randall Hyde
+"
+EbookFoundation/free-programming-books,Added (Programming in D) book,MERGED,2013-10-14T13:03:01Z,True,True,2013-10-14T15:25:29Z,2013-10-14T15:25:29Z,0,2,0,2,2,
+EbookFoundation/free-programming-books,Added OpenSCAD User Manual,MERGED,2013-10-14T13:52:41Z,True,True,2013-10-14T15:25:40Z,2013-10-14T15:25:40Z,0,2,0,0,0,"Added a section for OpenSCAD and a link to the online User Manual that describes the software and the 3D modelling language it uses.
+"
+EbookFoundation/free-programming-books,"Add ""Git Magic"" book.",MERGED,2013-10-14T14:20:25Z,True,True,2013-10-14T15:25:51Z,2013-10-14T15:25:51Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added Practical and Theoretical Aspects of Compiler Construction,MERGED,2013-10-14T14:39:31Z,True,True,2013-10-14T15:26:02Z,2013-10-14T15:26:02Z,0,2,0,0,0,"Stanford CS143 course archives from 2012.
+"
+EbookFoundation/free-programming-books,Added PHP: The Right Way,MERGED,2013-10-14T14:40:27Z,True,True,2013-10-14T15:26:20Z,2013-10-14T15:26:20Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Adds 'Developing Backbone.js Applications',MERGED,2013-10-14T15:59:04Z,True,True,2013-10-14T16:00:24Z,2013-10-14T16:00:24Z,0,2,0,0,0,"Adding 'Developing Backbone.js Applications' to the JavaScript list.
 
 Thanks!
 "
-freeCodeCamp/freeCodeCamp,Fixed typo on nonprofit detail page,MERGED,2015-04-29T17:17:26Z,True,True,2015-04-30T20:13:40Z,2015-04-30T20:13:40Z,0,4,3,2,2,"Fixed a typo on nonprofit show.jade
-- Line 65 changed ""Nonprofits Projects"" to ""Nonprofit Projects""
+EbookFoundation/free-programming-books,Add Android Resource from vogella,MERGED,2013-10-14T16:25:56Z,True,True,2013-10-14T18:31:56Z,2013-10-14T18:31:56Z,0,2,0,0,0,"Add Android Resource from vogella
 "
-freeCodeCamp/freeCodeCamp,Twitter zipline API endpoints,MERGED,2015-04-30T20:21:38Z,True,True,2015-05-05T18:24:41Z,2015-05-05T18:24:41Z,0,3,1,2,2,"Sorry, my bad. Totally forgot.
+EbookFoundation/free-programming-books,"Add ""PHP Internals Book"".",MERGED,2013-10-14T17:11:03Z,True,True,2013-10-14T18:32:22Z,2013-10-14T18:32:22Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Update free-programming-books.md,MERGED,2013-10-14T18:22:09Z,True,True,2013-10-14T18:32:47Z,2013-10-14T18:32:47Z,0,2,1,5,5,"Updating info on books from Green Tea Press.
 "
-freeCodeCamp/freeCodeCamp,Mobile news,MERGED,2015-05-01T02:11:08Z,True,True,2015-05-02T04:42:34Z,2015-05-02T04:42:34Z,0,2,0,1460,1460,
-freeCodeCamp/freeCodeCamp,Merge branch 'mobile-news',MERGED,2015-05-02T04:56:40Z,True,True,2015-05-02T06:13:08Z,2015-05-02T06:13:08Z,0,1,0,37,37,"Conflicts:
-    views/challengeMap/show.jade
+EbookFoundation/free-programming-books,Added a few MOOCs ,MERGED,2013-10-14T19:33:51Z,True,True,2013-10-15T10:00:01Z,2013-10-15T10:00:01Z,0,2,0,1,1,
+EbookFoundation/free-programming-books,added new Javascript Book,CLOSED,2013-10-14T19:34:56Z,True,False,2013-10-14T19:42:42Z,,0,1,0,0,0,"Just added a new free online book about JavaScript
 "
-freeCodeCamp/freeCodeCamp,News mailer fix,MERGED,2015-05-04T00:43:02Z,True,True,2015-05-04T20:53:03Z,2015-05-04T20:53:03Z,0,2,0,25,25,"Fixes link mailed out from ..../stories/... to ..../news/...
+EbookFoundation/free-programming-books,Added some new Algo books,MERGED,2013-10-14T20:09:08Z,True,True,2013-10-15T10:09:12Z,2013-10-15T10:09:12Z,0,2,0,0,0,"Added 3 new Algorithm books
 "
-freeCodeCamp/freeCodeCamp,Fix CDN and asset pipeline and other minor improvements,MERGED,2015-05-04T05:34:43Z,True,True,2015-05-04T20:52:27Z,2015-05-04T20:52:27Z,0,4,0,34013,34013,
-freeCodeCamp/freeCodeCamp,Fix typo and add tests for bonfire Arguments Optional,MERGED,2015-05-05T10:04:49Z,True,True,2015-05-05T19:25:28Z,2015-05-05T19:25:28Z,0,3,1,2,2,"The instructions for the bonfire Arguments Optional say to return `undefined` when either argument isn't a valid number, but the tests only cover the first argument.
+EbookFoundation/free-programming-books,Update free-programming-books.md,CLOSED,2013-10-14T20:13:54Z,True,False,2013-10-21T12:37:30Z,,0,4,5,0,0,"added [The Linux Programmer's Guide](http://www.tldp.org/LDP/lpg-0.4.pdf)
+"
+EbookFoundation/free-programming-books,added to R books from Charles DiMaggio at the Mailman School of Public H...,CLOSED,2013-10-14T20:21:06Z,True,False,2013-10-14T20:26:54Z,,0,1,0,0,0,"An R intro and an Spatial Analysis book for Public Health, Columbia University, Charles DiMaggio
+"
+EbookFoundation/free-programming-books,"Added ""Object-Oriented Reengineering Patterns"" by Demeyer, Ducasse & Nie...",MERGED,2013-10-14T20:42:36Z,True,True,2013-10-15T10:02:12Z,2013-10-15T10:02:12Z,0,2,0,0,0,"...rstrasz
+"
+EbookFoundation/free-programming-books,added to R books from Charles DiMaggio at Columbia University,CLOSED,2013-10-14T20:48:05Z,True,False,2013-10-15T11:13:57Z,,0,2,0,0,0,"Mailman School of Public Health
+1.  Intro to R
+   2 Spatial Analysis for Public Health
+"
+EbookFoundation/free-programming-books,Script to check if links are still alive,CLOSED,2013-10-14T21:51:17Z,True,False,2014-01-03T16:13:49Z,,0,6,26,1,1,"I added a script to check if the links are still alive. Tested only on OS X. It's Ruby. 
 
-This adds tests for the second argument as well, and fixes a typo.
+The script checks if the URL is accessible. I also added a way to check if the content matches. See the example <verify> tag for one of the books. 
 "
-freeCodeCamp/freeCodeCamp,Added clarification to the search and replace bonfire (21),MERGED,2015-05-08T18:09:58Z,True,True,2015-05-09T23:36:31Z,2015-05-09T23:36:31Z,0,3,0,1,1,"Fixes #431 
+EbookFoundation/free-programming-books,"Add ""Autotools Mythbuster""",MERGED,2013-10-14T23:20:16Z,True,True,2013-10-15T11:14:56Z,2013-10-15T11:14:56Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,add Haskell: A Gentle Introduction to Haskell,MERGED,2013-10-15T09:58:58Z,True,True,2013-10-15T10:05:20Z,2013-10-15T10:05:20Z,0,2,0,0,0,"Wonderful short book on Haskell!
 "
-freeCodeCamp/freeCodeCamp,Change jQuery challenge description slightly.,MERGED,2015-05-09T00:52:09Z,True,True,2015-05-09T23:38:10Z,2015-05-09T23:38:10Z,0,1,0,2,2,"Clarifies jQuery is a Javascript library, and changes JavaScript to Javascript. Closes #433 
+EbookFoundation/free-programming-books,Sage for Power Users by William Stein,MERGED,2013-10-15T10:26:38Z,True,True,2013-10-15T10:46:07Z,2013-10-15T10:46:07Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added a Drupal Framework section under php literature with a couple of f...,MERGED,2013-10-15T12:48:13Z,True,True,2013-10-15T13:43:54Z,2013-10-15T13:43:54Z,0,2,0,0,0,"Added a Drupal Framework section under PHP literature with a couple of free online Drupal books.
 "
-freeCodeCamp/freeCodeCamp,Staging,MERGED,2015-05-14T22:14:58Z,True,True,2015-05-15T01:31:35Z,2015-05-15T01:31:35Z,0,1,0,44,44,"Add OSI approved BSD-3-Clause license and update contributors in package.json
+EbookFoundation/free-programming-books,"Added ""Network Security Tools"" book to the Network section",MERGED,2013-10-15T12:57:08Z,True,True,2013-10-15T13:44:22Z,2013-10-15T13:44:22Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added The wikibooks 'x86 Assembly guide',MERGED,2013-10-15T13:34:20Z,True,True,2013-10-15T13:44:32Z,2013-10-15T13:44:32Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added first line (python) in italian list,MERGED,2013-10-15T13:51:56Z,True,True,2013-10-15T13:53:16Z,2013-10-15T13:53:16Z,0,2,0,0,0,"Added first line (python) in italian list
 "
-freeCodeCamp/freeCodeCamp,paircode feature,CLOSED,2015-05-16T02:50:22Z,True,False,2015-05-23T22:15:22Z,,0,5,4,12,12,"No new dependencies.
+EbookFoundation/free-programming-books,Added book by David MacKay to Machine Learning section,MERGED,2013-10-15T14:02:43Z,True,True,2013-10-15T14:04:59Z,2013-10-15T14:04:59Z,0,2,0,0,0,"Information Theory, Inference, and Learning Algorithms
+"
+EbookFoundation/free-programming-books,Added book to Datamining section,MERGED,2013-10-15T14:16:22Z,True,True,2013-10-15T14:54:12Z,2013-10-15T14:54:12Z,0,2,0,0,0,"The Elements of Statistical Learning: Data Mining, Inference, and Prediction.  By Trevor Hastie, Robert Tibshirani, and Jerome Friedman
+"
+EbookFoundation/free-programming-books,Added some more books. I've found both of these extremely useful :),MERGED,2013-10-15T14:17:03Z,True,True,2013-10-15T14:54:30Z,2013-10-15T14:54:30Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added book to Mathematics section,MERGED,2013-10-15T14:23:08Z,True,True,2013-10-15T14:54:40Z,2013-10-15T14:54:40Z,0,2,0,0,0,"Introduction to Statistical Thought by Michael Lavine
+"
+EbookFoundation/free-programming-books,Update free-programming-books.md,MERGED,2013-10-15T14:40:34Z,True,True,2013-10-15T14:54:50Z,2013-10-15T14:54:50Z,0,2,0,0,0,"Added ebooks about SQL Server
+"
+EbookFoundation/free-programming-books,Deleted duplicated backbone.js books.,MERGED,2013-10-15T16:39:04Z,True,True,2013-10-15T16:41:46Z,2013-10-15T16:41:46Z,0,2,1,2,2,
+EbookFoundation/free-programming-books,TCS && Misc Cleanup,MERGED,2013-10-15T17:21:55Z,True,True,2013-10-15T18:23:54Z,2013-10-15T18:23:54Z,0,2,1,24,24,"Added new categories, Theoretical CS and Open Source Ecosystem.
+Moved stuff around into their appropriate locations, in my opinion. 
+"
+EbookFoundation/free-programming-books,Added 'Practical File System Design: The Be File System' and a Smalltalk list.,MERGED,2013-10-15T17:42:35Z,True,True,2013-10-15T18:25:11Z,2013-10-15T18:25:11Z,0,2,0,1,1,"Both are resources I've found fascinating and educational over the years.
+"
+EbookFoundation/free-programming-books,"Fix ""Programming Computer Vision with Python"" link",MERGED,2013-10-15T22:42:48Z,True,True,2013-10-16T08:18:44Z,2013-10-16T08:18:44Z,0,2,0,1,1,
+EbookFoundation/free-programming-books,Minor changes,MERGED,2013-10-15T23:18:11Z,True,True,2013-10-16T08:19:14Z,2013-10-16T08:19:14Z,0,2,0,11,11,"Changes:
+- removed dead links
+- moved the `Django` section under `Python`
+- added [`Book of Speed`](http://www.bookofspeed.com/index.html) by Stoyan Stefanov
+"
+EbookFoundation/free-programming-books,Add Hadoop Illuminated,MERGED,2013-10-16T01:57:33Z,True,True,2013-10-16T08:19:24Z,2013-10-16T08:19:24Z,0,2,0,0,0,"Adding @hadoop-illuminated to the free book list.
+"
+EbookFoundation/free-programming-books,Scientific python ,MERGED,2013-10-16T02:27:13Z,True,True,2013-10-16T08:19:53Z,2013-10-16T08:19:53Z,0,2,0,0,0,"state-of-the-art free books about scientific python
+"
+EbookFoundation/free-programming-books,testing,CLOSED,2013-10-16T05:07:14Z,True,False,2013-10-16T08:20:03Z,,0,2,0,0,0,"sorry, I am testing github.
+"
+EbookFoundation/free-programming-books,Added The Django Book.,CLOSED,2013-10-16T06:16:23Z,True,False,2013-10-16T08:21:01Z,,0,2,1,0,0,
+EbookFoundation/free-programming-books,"added french list and 2 books (C, Javascript)",MERGED,2013-10-16T07:35:32Z,True,True,2013-10-16T08:21:36Z,2013-10-16T08:21:36Z,0,2,1,0,0,
+EbookFoundation/free-programming-books,Update free-programming-books.md,MERGED,2013-10-16T10:12:39Z,True,True,2013-10-16T11:01:40Z,2013-10-16T11:01:40Z,0,2,0,1,1,"Added Adobe Flex2 programming book
+"
+EbookFoundation/free-programming-books,Adding Octave,MERGED,2013-10-16T11:12:48Z,True,True,2013-10-16T11:52:10Z,2013-10-16T11:52:10Z,0,2,0,0,0,"Adding a link to tutorials on Octave.
+"
+EbookFoundation/free-programming-books,Fix C++ link,CLOSED,2013-10-16T13:00:47Z,True,False,2013-10-16T13:19:07Z,,0,2,1,2,2,"I know that it's not so clean but I notice that this link was broken. I don't know how to fix it without adding inline HTML.
+"
+EbookFoundation/free-programming-books,Put Flask under Python,MERGED,2013-10-16T13:43:59Z,True,True,2013-10-16T13:47:57Z,2013-10-16T13:47:57Z,0,2,0,4,4,
+EbookFoundation/free-programming-books,"more hackershelf books, some refactoring",MERGED,2013-10-16T14:29:48Z,True,True,2013-10-16T17:01:58Z,2013-10-16T17:01:58Z,0,2,0,2,2,"Add Dart language;
+Reorder meta-lists, add O'Reilly Commons and hacker shelf
+Remove duplicate (Bayesian Methods for Hackers)
+Additions from hackershelf
+"
+EbookFoundation/free-programming-books,Add Problem Solving with Algorithms and Data Struc,MERGED,2013-10-16T14:48:22Z,True,True,2013-10-16T17:02:10Z,2013-10-16T17:02:10Z,0,2,0,0,0,"Add Problem Solving with Algorithms and Data Structures. Since it is written
+in python, I have added it twice.
 
-Edits per comments found here: #322 
-
-Slack handle is automatically populated; users specify if they want to pair on a bonfire, courseware, or both. Information is displayed conditionally on the next page, listing all the requests.
-
-A modal pops up when the request is close to expiring; otherwise, if the user's request gets automatically deleted, a flash message informs them on the next page they visit.
-
-:)
+This was suggested by Fabian Dablander on the Python community on Facebook.
 "
-freeCodeCamp/freeCodeCamp,fix typo on line 97 of coursewwares.json,CLOSED,2015-05-19T04:31:28Z,True,False,2015-05-21T16:34:05Z,,0,3,3,1,1,"changed line 97 in freecodecamp/seed_data/courseware.json from ""You an also comment on a link ..."" to ""You can also comment on a link ...""
+EbookFoundation/free-programming-books,Added the Language Agnostic subsections to TOC,MERGED,2013-10-16T16:46:59Z,True,True,2013-10-16T17:02:30Z,2013-10-16T17:02:30Z,0,2,1,0,0,"Found myself scrolling through the Language Agnostic section a lot; added TOC for quicker access to subsections.
 "
-freeCodeCamp/freeCodeCamp,Added MDN links to Bonfire 19: Diff Two Arrays,MERGED,2015-05-19T05:47:30Z,True,True,2015-05-21T15:20:13Z,2015-05-21T15:20:13Z,0,3,2,1,1,"Fixes FreeCodeCamp/freecodecamp#374
-
-I added the following links to Bonfire 19: ""String.slice()"", ""Array.filter()"", ""Array.indexOf()"", and  ""String.concat()"".
+EbookFoundation/free-programming-books,added some tutorials and style-guides to Ruby and Rails sections,MERGED,2013-10-16T19:28:29Z,True,True,2013-10-16T21:43:26Z,2013-10-16T21:43:26Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Adds J,MERGED,2013-10-16T21:50:42Z,True,True,2013-10-16T22:02:43Z,2013-10-16T22:02:43Z,0,2,0,0,0,"I added books from [here](http://www.jsoftware.com/jwiki/Books).  
 "
-freeCodeCamp/freeCodeCamp,"removed ""white-space: pre-line"" rule from pre.wrappable elements to p…",MERGED,2015-05-20T01:03:32Z,True,True,2015-05-21T15:19:04Z,2015-05-21T15:19:04Z,0,3,3,0,0,"…rettify bonfire solution formatting.
-
-Before:
-![phoenixstormcrow-459-before](https://cloud.githubusercontent.com/assets/2560986/7717148/2e13885a-fe51-11e4-8722-33b36241b10d.png)
-
-After:
-![phoenixstormcrow-459-after](https://cloud.githubusercontent.com/assets/2560986/7717147/2e105d24-fe51-11e4-9b91-8cdf421d6719.png)
-
-closes #459 
+EbookFoundation/free-programming-books,Liste de livres en FranÃ§ais,MERGED,2013-10-16T22:03:42Z,True,True,2013-10-16T22:05:59Z,2013-10-16T22:05:59Z,0,2,0,5,5,"Finalement j'ai eu le temps de m'en occuper maintenant... j'ai mÃªme Ã©tÃ© pris un peu de court par un Kondor ...
 "
-freeCodeCamp/freeCodeCamp,Challenge restructure,MERGED,2015-05-21T03:37:26Z,True,True,2015-05-21T07:12:52Z,2015-05-21T07:12:52Z,0,2,0,4613,4613,"Updated challenge structure. Bonfire and Courseware no longer have separate controllers.
+EbookFoundation/free-programming-books,2 books on (plain) TeX,MERGED,2013-10-16T22:20:51Z,True,True,2013-10-16T22:24:54Z,2013-10-16T22:24:54Z,0,2,0,0,0,"In a other section than LaTeX, but with Link
 "
-freeCodeCamp/freeCodeCamp,Courseware,CLOSED,2015-05-21T13:43:48Z,True,False,2015-05-22T12:58:43Z,,0,3,2,2701,2701,
-freeCodeCamp/freeCodeCamp,Use findone in controllers/story,MERGED,2015-05-21T16:17:08Z,True,True,2015-05-22T12:54:01Z,2015-05-22T12:54:01Z,0,2,0,11,11,"also fixes some linting issues
-closes #469
+EbookFoundation/free-programming-books,assembleur 64 bits,MERGED,2013-10-16T22:33:31Z,True,True,2013-10-16T22:38:35Z,2013-10-16T22:38:35Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Add some ruby books and courses,MERGED,2013-10-17T03:28:13Z,True,True,2013-10-18T14:45:38Z,2013-10-18T14:45:38Z,0,2,0,0,0,"- Code Academy Ruby
+- How to think like a computer scientist: Learning with ruby
+- Ruby in twenty minutes
+- Ruby Essentials
+- Ruby Learning
 "
-freeCodeCamp/freeCodeCamp,Fix to issue #535 and #532,CLOSED,2015-05-26T15:18:25Z,True,False,2015-05-26T16:52:24Z,,0,3,1,3,3,"Fixed asserts to be more specific and descriptive.
+EbookFoundation/free-programming-books,Added introductory book on parallel computing,MERGED,2013-10-17T03:50:00Z,True,True,2013-10-17T06:50:25Z,2013-10-17T06:50:25Z,0,2,0,0,0,"This book ""is intended to provide only a very quick overview of the extensive and broad topic of Parallel Computing.""  There is another non-free book by the same title, hence the author attribution following the link.
 "
-freeCodeCamp/freeCodeCamp,improved tests for chunky monkey bonfire,MERGED,2015-05-26T19:52:45Z,True,True,2015-05-27T17:30:35Z,2015-05-27T17:30:35Z,0,3,1,0,0,
-freeCodeCamp/freeCodeCamp,Minor grammatical error,MERGED,2015-05-27T00:52:07Z,True,True,2015-05-27T02:11:50Z,2015-05-27T02:11:50Z,0,3,0,1,1,
-freeCodeCamp/freeCodeCamp,very minor grammatical error fixed,MERGED,2015-05-27T06:07:04Z,True,True,2015-05-27T17:29:39Z,2015-05-27T17:29:39Z,0,3,0,1,1,
-freeCodeCamp/freeCodeCamp,"Issue #569 fix, tests added.",MERGED,2015-05-27T07:28:01Z,True,True,2015-05-27T17:28:41Z,2015-05-27T17:28:41Z,0,3,1,2,2,"Added tests for top and right padding, as they were not present before.
+EbookFoundation/free-programming-books,2 Mathematica Books added,MERGED,2013-10-17T03:53:02Z,True,True,2013-10-17T06:50:36Z,2013-10-17T06:50:36Z,0,2,0,1,1,"- [Stephen Wolfram's The Mathematica Book](http://reference.wolfram.com/legacy/v5_2/)
+- [Wolfram Mathematica Tutorial Collection](http://www.wolfram.com/learningcenter/tutorialcollection/)
 "
-freeCodeCamp/freeCodeCamp,Fix to issue #633 and a hand full of the other issues related to the challenge,MERGED,2015-05-27T15:52:21Z,True,True,2015-05-27T17:27:49Z,2015-05-27T17:27:49Z,0,3,0,0,0,"More tests added to match description
+EbookFoundation/free-programming-books,Added Jeff Erickson's Algorithms Course Materials,MERGED,2013-10-17T04:08:36Z,True,True,2013-10-17T06:51:08Z,2013-10-17T06:51:08Z,0,2,0,0,0,"Includes homework and his algorithms course notes.  Only reason it's not a book is that Jeff says ""All textbooks suck.""
 "
-freeCodeCamp/freeCodeCamp,Update basic-html5-and-css.json,CLOSED,2015-05-28T03:14:34Z,True,False,2015-05-31T03:03:40Z,,0,3,1,2,2,"Removed the """"You can also use this notation for margins!"""" on line 1994 
-from the waypoint ""Use Clockwise Notation to Specify the Margin of an Element"" 
-that was obviously copied and pasted from the padding section just prior to it. 
-Since this is the margin section, this sentence was redundant.
-"
-freeCodeCamp/freeCodeCamp,Prevents incorrect solution to Mutations bonfire,MERGED,2015-05-28T11:02:45Z,True,True,2015-05-31T03:04:41Z,2015-05-31T03:04:41Z,0,3,0,1,1,"Prevents the following solution from being correct:
-
-``` javascript
-function mutation(arr) {
-  var foo = arr[0].toLowerCase().split('').sort();
-  var bar = arr[1].toLowerCase().split('').sort();
-  var start = foo.indexOf(bar[0]);
-
-  for(var i = 0; i < bar.length; i++)
-    if(foo[start + i] !== bar[i]) return false;
-
-  return true;
-}
-```
-"
-freeCodeCamp/freeCodeCamp,computer-science spanish translation,CLOSED,2015-05-28T20:55:30Z,True,False,2015-05-29T01:53:19Z,,0,3,2,29,29,"Spanish translation, hope no errors were made.
-"
-freeCodeCamp/freeCodeCamp,es translation,MERGED,2015-05-29T01:56:59Z,True,True,2015-05-31T03:06:22Z,2015-05-31T03:06:22Z,0,3,0,29,29,"### To be reviewed
-- computer-science.json **spanish translation v0.2**
-- get-set-for-free-code-camp.json **spanish translation v0.1** to be checked
-"
-freeCodeCamp/freeCodeCamp,fixed bug where the 'next challenge' button in tablet view couldn't…,MERGED,2015-05-29T03:26:50Z,True,True,2015-05-31T03:07:32Z,2015-05-31T03:07:32Z,0,3,0,0,0,"…be pressed.
-
-Beware of floats (ergo, beware of Bootstrap subtleties)
-"
-freeCodeCamp/freeCodeCamp,HTML Waypoints translated to ES [WIP],MERGED,2015-05-29T08:53:25Z,True,True,2015-05-31T03:07:50Z,2015-05-31T03:07:50Z,0,3,0,20,20,"Waypoint ""Say Hello to HTML Elements"" translated into Spanish.
-
-Note: as HTML/CSS track is huge, I'm going to tackle it using baby steps (waypoint to waypoint).
-"
-freeCodeCamp/freeCodeCamp,Fixes sentence cut-off bug in Make Circular Images with a Border Radius,MERGED,2015-05-30T00:10:38Z,True,True,2015-05-31T03:09:17Z,2015-05-31T03:09:17Z,0,3,2,1,1,"When completing 'Make Circular Images with a Border Radius', the sentence is cut off at the comma (see left). This fixes it (see right).
-![fcc-border-radius](https://cloud.githubusercontent.com/assets/3090888/7894754/a264c2e2-0670-11e5-9710-85a1c74ba40e.png)
-
-Tested i Firefox 38 and Chromium 43.
-"
-freeCodeCamp/freeCodeCamp,Cleaner output form 'Turn an Image into a Link',CLOSED,2015-05-30T01:15:24Z,True,False,2015-05-31T03:09:41Z,,0,3,1,2,2,"Seems like using expect() to validate code is clutters up the success message.
-![fcc-to be](https://cloud.githubusercontent.com/assets/3090888/7895029/8226231e-0679-11e5-9772-4ac27765c877.png)
-
-After a cursory glance, this was the only similar occurrence in any of the HTML/CSS Waypoints. Changing expect statemtens to assert statments in the bonfires just seemed to mess up the entire thing, and I've found them helpful, so I assume they shouldn't be replaced all over?
-What is the general ""policy"" towards assert vs expect? Seems to be a somewhat even split between the two.
-"
-freeCodeCamp/freeCodeCamp,Incorrect seed in 'Use HTML5 to Require a Field' #703,MERGED,2015-05-30T14:43:23Z,True,True,2015-05-31T03:11:18Z,2015-05-31T03:11:18Z,0,3,1,3,3,"This fixes #703.
-"
-freeCodeCamp/freeCodeCamp,Improves 'Add Placeholder Text to a Text Field' and fixes #701,MERGED,2015-05-30T15:01:57Z,True,True,2015-05-31T03:12:30Z,2015-05-31T03:12:30Z,0,3,2,2,2,"This resolves #701 and makes 'Your placeholder field should have the value of ""cat photo URL""' false until the placeholder contains ""cat photo URL"" as opposed to the previous case-insensitive ""url"".
-"
-freeCodeCamp/freeCodeCamp,Adds some missing slashes to tag-closes. #763,MERGED,2015-05-31T00:39:44Z,True,True,2015-05-31T03:19:00Z,2015-05-31T03:19:00Z,0,3,1,5,5,"Fixes #763 and similar issues in these challenges:
-- [Use CSS Selectors to Style Elements](http://www.freecodecamp.com/challenges/waypoint-use-css-selectors-to-style-elements)
-- [Use a CSS Class to Style an Element](http://www.freecodecamp.com/challenges/waypoint-use-a-css-class-to-style-an-element)
-- [Turn an Image into a Link](http://www.freecodecamp.com/challenges/waypoint-turn-an-image-into-a-link)
-- [Create a Bulleted Unordered List](http://www.freecodecamp.com/challenges/waypoint-create-a-bulleted-unordered-list)
-- [Create an Ordered List](http://www.freecodecamp.com/challenges/waypoint-create-an-ordered-list)
-"
-freeCodeCamp/freeCodeCamp,Checks all margins in 'Add Different a Margin to Each Side of an Element' #753,MERGED,2015-05-31T00:56:18Z,True,True,2015-05-31T03:19:40Z,2015-05-31T03:19:39Z,0,3,0,0,0,"Fixes #753.
-~~I could make individual checks for each margin side instead of one for the 40px margins and one for the 20px margins if that would be better?~~
-EDIT: I realized that the padding version of this challenge used 4 separate checks, so used that layout.
-"
-freeCodeCamp/freeCodeCamp,Improves checks in 'Create a Set of Checkboxes',MERGED,2015-05-31T01:36:56Z,True,True,2015-05-31T03:21:08Z,2015-05-31T03:21:08Z,0,3,1,1,1,"Now checks for labels with input fields of type 'checkbox' instead of just checking for labels.
-"
-freeCodeCamp/freeCodeCamp,Fixes build problems caused by JSON errors.,CLOSED,2015-05-31T11:51:56Z,True,False,2015-05-31T20:39:06Z,,0,3,3,6,6,"@QuincyLarson and I had edited the same text, so the merge added a bunch of weird Git stuff that prevented the site from building.
-"
-freeCodeCamp/freeCodeCamp,A lot of minor fixes and test case improvements to the Bootstrap waypoints.,MERGED,2015-05-31T17:48:53Z,True,True,2015-05-31T20:42:39Z,2015-05-31T20:42:39Z,0,3,3,35,35,"...and a grammar fix.
-
-I was not sure how to handle the commits, so they ended up being per challenge instead of one commit per issue over all challenges (e.g. one commit for all moves to .hasClass() and one for all the grammar fixes). Rebasing it to the latter would be a huge hassle, but I could do it if you think it would look better.
-
-edit(berks):
-closes #776 
-
-Edit 2:
-...and #769 (unless you prefer ""a Margin"" to ""Margins"")
-"
-freeCodeCamp/freeCodeCamp,Basic Javascript waypoints translated into ES [WIP],CLOSED,2015-06-02T01:35:57Z,True,False,2015-06-03T21:46:21Z,,0,2,5,4,4,"Basic JavaScript waypoints translated into Spanish [WIP].
-"
-freeCodeCamp/freeCodeCamp,Changed input type from checkbox to radio and attribute comparison name from trait to personality,CLOSED,2015-06-03T06:41:47Z,True,False,2015-06-03T15:09:37Z,,0,3,1,1,1,"Issue below:
-
-> Challenge http://www.freecodecamp.com/challenges/waypoint-create-a-set-of-checkboxes has an >issue. Please describe how to reproduce it, and include links to screen shots if possible.
+EbookFoundation/free-programming-books,Books from hackershelf; created Russian list,MERGED,2013-10-17T07:43:43Z,True,True,2013-10-17T09:08:20Z,2013-10-17T09:08:20Z,0,2,0,1,1,
+EbookFoundation/free-programming-books,Added some of Syncfusion and RedGate free e-books,MERGED,2013-10-17T09:06:11Z,True,True,2013-10-17T09:08:38Z,2013-10-17T09:08:38Z,0,2,0,1,1,"> Full list of Syncfusion free e-books 
 > 
-> Give your radio buttons the name attribute of ""personality"".
+> > http://www.syncfusion.com/resources/techportal/ebooks
+> > To download any book you need just fill in any values into fields (name, company, email, phone).
+> > Example: name='asdqwd', company='qqweqwe', email='asdasd@gmail.com', phone='98712312390'
 > 
-> Cannot satisfy this request. This waypoint is on checkboxes and it is asking for me to edit the radio >button. I've changed the checkboxes and the radio buttons to have name=""personality"" nothing works.
-
-The problem seems to be in the test. If you add the name trait to a checkbox then the challenge will pass. So to fix this I just changed the input type from a checkbox to a radio (which is what the instructions tell you to do it on) and I changed the attribute comparison from trait to personality (which is what the instructions tell you to name it).
-
-I've tested this with console.log and my update works for me. Please review and let me know.
-
-Thanks,
-Charles
-"
-freeCodeCamp/freeCodeCamp,Changed z-index of iframe-scroll class to 1,MERGED,2015-06-04T03:07:46Z,True,True,2015-06-04T07:17:56Z,2015-06-04T07:17:56Z,0,3,3,1,1,"Fixes the iPhone from covering up the code editor but still keeps the iPhone above the footer.
-closes #830 
-"
-freeCodeCamp/freeCodeCamp,itzsaga-833,CLOSED,2015-06-04T05:33:44Z,True,False,2015-06-04T07:41:05Z,,0,3,2,168,168,"fixed a typo in the field guide.
-"
-freeCodeCamp/freeCodeCamp,Fixes RegExp so it matches the class .blue-text,MERGED,2015-06-05T05:35:47Z,True,True,2015-06-08T04:55:08Z,2015-06-08T04:55:08Z,0,3,3,2,2,"Ref: #841 
-
-The current expression on the site now works but the dot/period isn't escaped which is causing the challenge to pass that step if any characters (except line breaks) are in front of the word ""blue-text""
-
-So to fix this I just escaped the dot/period and changed the format to literal notation.
-"
-freeCodeCamp/freeCodeCamp,Add tests for confirm the ending bonfire,MERGED,2015-06-05T12:42:55Z,True,True,2015-06-09T20:07:24Z,2015-06-09T20:07:24Z,0,3,1,0,0,"Users searching for just occurrence of target and not the position(in this case the ending of the string) in this bonfire can pass the tests. So , currently this code pass the tests
-
-```
-function end(str, target) {
-  return str.split(target) != str;
-}
-```
-
-Added tests to fix this flaw.
-"
-freeCodeCamp/freeCodeCamp,Fixed typo in Get Set for Ziplines waypoint.,MERGED,2015-06-06T11:40:27Z,True,True,2015-06-06T17:51:05Z,2015-06-06T17:51:05Z,0,2,1,1,1,"Changed ""Click the gear next the JavaScript."" to ""Click the gear next to the JavaScript.""
-Fixes https://github.com/FreeCodeCamp/freecodecamp/issues/850
-"
-freeCodeCamp/freeCodeCamp,Removed aarmy example from descr and changed the test for it to passing,MERGED,2015-06-07T04:05:20Z,True,True,2015-06-08T04:52:51Z,2015-06-08T04:52:51Z,0,3,1,3,3,"Ref #845 
-"
-freeCodeCamp/freeCodeCamp,Fixed regexp on both ul and li opening tags,MERGED,2015-06-09T03:38:02Z,True,True,2015-06-09T19:54:30Z,2015-06-09T19:54:30Z,0,3,2,2,2,"Ref: #864 
-
-The `ul` and `li` opening tags will now return true if a class happens to be added to either of them.
-"
-freeCodeCamp/freeCodeCamp,issue 782,MERGED,2015-06-09T21:56:38Z,True,True,2015-06-11T05:52:03Z,2015-06-11T05:52:03Z,0,3,1,1,1,"- Add link for slack channel
-- Add alert message in top of first bonfire challenge to warn about outdated video
-"
-freeCodeCamp/freeCodeCamp,Fixed a word,MERGED,2015-06-14T01:55:30Z,True,True,2015-06-16T03:35:46Z,2015-06-16T03:35:46Z,0,2,1,1,1,
-freeCodeCamp/freeCodeCamp,Added missing MDN Link,MERGED,2015-06-14T04:28:54Z,True,True,2015-06-16T03:37:01Z,2015-06-16T03:37:01Z,0,2,1,1,1,"This bonfire ""Missing letters""seems to be missing an important MDN link to ""String.fromCharCode()"", which is needed to get the missing character to return for the test. Since the missing character is obviously not in the string supplied, you cannot get the character code for it from the string.
-"
-freeCodeCamp/freeCodeCamp,More 'Convert HTML Entities' test cases. Fixes #924,MERGED,2015-06-15T15:31:26Z,True,True,2015-06-19T23:00:45Z,2015-06-19T23:00:45Z,0,3,0,0,0,"This adds more test cases to the 'Convert HTML Entities'-bonfire. The new test cases now checks for all the characters instead of just '&', and they also check that mutlitple characters in a string is converted, preventing solutions which would only convert the first character, like this one:
-
-``` javascript
-function converter(m) {
-    switch(m) {
-        case '&':
-            return ""&amp;"";
-        case '<':
-            return ""&lt;"";
-        case '>':
-            return ""&gt;"";
-        case '""':
-            return ""&quot;"";
-        case ""'"":
-            return ""&apos;"";
-    }
-}
-
-function convert(str) {
-    return str.replace(/([&<>""'])/, converter);
-}
-```
-"
-freeCodeCamp/freeCodeCamp,Fixed Zipline jQuery.getJSON() links.,MERGED,2015-06-15T15:46:29Z,True,True,2015-06-19T23:03:17Z,2015-06-19T23:03:17Z,0,2,0,5,5,"All anchors that linked to http://api.jquery.com/jquery.each/ now link correctly to http://api.jquery.com/jquery.getjson/.
-This fixes issues #918 and #919.
-"
-freeCodeCamp/freeCodeCamp,Improves check for catphotoapp.com in 'Link to External Pages with Anchor Elements',MERGED,2015-06-15T16:09:47Z,True,True,2015-06-19T23:05:23Z,2015-06-19T23:05:23Z,0,2,0,1,1,"Makes the test case look for the case-insensitive ""http://catphotoapp.com"" instead of just ""com"" in the anchor's href attribute. I chose to use the global, case-insensitive regex instead of just `$('a').attr('href') === 'http://catphotoapp.com'` because it gives the user a bit more freedom (see trailing backslashes etc.) and I've seen it used in other test cases. Let me know if you want a stricter or looser test and I'll change it.
-
-Fixes #914.
-"
-freeCodeCamp/freeCodeCamp,Test for almost palindromes in 'Check for Palindromes',MERGED,2015-06-15T16:17:24Z,True,True,2015-06-19T23:06:56Z,2015-06-19T23:06:56Z,0,2,0,1,1,"Adds a test for strings that start and end in the same characters but that are not complete palindromes.
-Fixes #911
-"
-freeCodeCamp/freeCodeCamp,Check fix in 'Bootstrap Grid'.,MERGED,2015-06-15T16:28:21Z,True,True,2015-06-19T23:07:48Z,2015-06-19T23:07:48Z,0,2,0,1,1,"The previous test case forgot to check that the relevant element actually existed, causing it to always be true.
-Fixes #907
-"
-freeCodeCamp/freeCodeCamp,Added auto-saving feature for Bonfires ,CLOSED,2015-06-16T05:49:49Z,True,False,2015-06-20T00:28:11Z,,0,1,1,4,4,"to version 0.0.6
-
-Added auto save(to local storage) for any progress made in editor. It will set the IDE text to whatever the user last saw within 24 hours when page has been loaded. 
-The auto save happens every 1.5 seconds _after_ someone lifts a key.
-"
-freeCodeCamp/freeCodeCamp,Added Reset Modal for auto-save feature,CLOSED,2015-06-17T00:25:20Z,True,False,2015-06-20T00:27:27Z,,0,1,0,0,0,"When the reset button has been pressed this modal will popup asking for confirmation. 
-"
-freeCodeCamp/freeCodeCamp,Added Reset Button Underneath Run,CLOSED,2015-06-17T00:28:12Z,True,False,2015-06-20T00:26:57Z,,0,2,3,1,1,"This will now display a danger button showing ""Reset"" for anyone who wants to start over from the original server sent code. 
-"
-freeCodeCamp/freeCodeCamp,'No repeats please' test fix.,MERGED,2015-06-17T21:31:25Z,True,True,2015-06-20T00:29:25Z,2015-06-20T00:29:25Z,0,3,2,1,1,"Fixes #941
-"
-freeCodeCamp/freeCodeCamp,1hella 959,MERGED,2015-06-18T09:20:17Z,True,True,2015-06-20T00:31:14Z,2015-06-20T00:31:14Z,0,4,2,2,2,"Added new test to Bonfire: Truncate a String to prevent users from passing the bonfire without the full solution.
-"
-freeCodeCamp/freeCodeCamp,More test cases for 'Seek and Destroy' ,MERGED,2015-06-18T09:57:50Z,True,True,2015-06-20T00:32:31Z,2015-06-20T00:32:31Z,0,3,1,1,1,"Now checks for more arguments, completely emptied arrays and string elements.
-
-Fixes #942
-"
-freeCodeCamp/freeCodeCamp,Improve 'Convert HTML Entities' Bonfire,MERGED,2015-06-18T17:42:25Z,True,True,2015-06-20T00:35:14Z,2015-06-20T00:35:14Z,0,2,1,2,2,"Add a reference link to the w3.org ref for HTML Entities list.
-Improve the Bonfire text to clarify the double quote and apostrophe entities.
-Add a test to check '<', '>', and '""' (double quote).
+> Full list of RedGate free e-books
+> 
+> > http://www.red-gate.com/community/books/
 "
-freeCodeCamp/freeCodeCamp,Fixed typo in field-guides.json,MERGED,2015-06-19T00:46:10Z,True,True,2015-06-20T00:36:19Z,2015-06-20T00:36:19Z,0,2,1,1,1,"Changed 'langauge' to 'language' in Question 30 (What if I speak a language that Free Code Camp does not yet support?) of the Field Guide.
+EbookFoundation/free-programming-books,fix link for Thinking in C++,MERGED,2013-10-17T12:20:44Z,True,True,2013-10-17T15:32:41Z,2013-10-17T15:32:41Z,0,2,0,1,1,
+EbookFoundation/free-programming-books,Added SQL Server books from RedGate,MERGED,2013-10-17T14:15:47Z,True,True,2013-10-17T15:33:04Z,2013-10-17T15:33:04Z,0,2,0,2,2,"Tested and confirmed download links.  A couple require name & email; a few suggest you download other stuff, but you don't have to.  Removed direct PDF link of Mastering SQL Server Profiler in favor of the book's page on RedGate.
 "
-freeCodeCamp/freeCodeCamp,"Auto Save, Removed Stamps +more, done",MERGED,2015-06-20T00:47:51Z,True,True,2015-06-21T01:43:31Z,2015-06-21T01:43:31Z,0,1,1,30,30,"- Removed stamps so code stays stored until code has been reset. 
-- Added a feature which returns if the storage has been saved since last edit. `codeStorage.hasSaved();` 
-- Changed ""localBonfire"" to _codeStorage_
-
-**New Save Listener:**
-
-```
-codeStorage.onSave(function(){
-    console.log(""editor has been saved!"");
-    $(""#save-notifier"").empty().text(""last save...""+Date);
-});
-```
-
--**Less dependencies**: `codeStorage.setSaveKey(""unique id"");` 
-setSaveKey takes away the dependency the object had relying on the variable: challenge_Name 
+EbookFoundation/free-programming-books,Added two books in Mathematics section,MERGED,2013-10-17T14:26:01Z,True,True,2013-10-17T15:33:42Z,2013-10-17T15:33:42Z,0,2,0,0,0,"I wasn't sure if Advanced Data Analysis belonged in Datamining or Mathematics, but it seems to focus more on the math side of things
 "
-freeCodeCamp/freeCodeCamp,Fix missing semicolon in Symmetric Differences test,MERGED,2015-06-21T05:09:59Z,True,True,2015-06-22T13:59:19Z,2015-06-22T13:59:19Z,0,2,1,1,1,"The first test of Symmetric Differences is broken because it was missing a semicolon, making it impossible to pass.
+EbookFoundation/free-programming-books,"add some guides to the Rails section in the Russian version, renamed the...",MERGED,2013-10-17T14:34:29Z,True,True,2013-10-17T15:33:59Z,2013-10-17T15:33:59Z,0,2,0,1,1,"... title of the book about Ruby
 "
-freeCodeCamp/freeCodeCamp,Change eqls to equal,MERGED,2015-06-21T05:59:05Z,True,True,2015-06-22T13:52:57Z,2015-06-22T13:52:57Z,0,2,1,1,1,"This should resolve #962.
+EbookFoundation/free-programming-books,Added E-Books Directory to Meta-Lists,MERGED,2013-10-17T14:38:35Z,True,True,2013-10-17T15:34:09Z,2013-10-17T15:34:09Z,0,2,0,0,0,"Site contains a good deal of free books on a wide variety of subjects.
 "
-freeCodeCamp/freeCodeCamp,Bonfire: Convert HTML Entities - fixing assert test to call function,CLOSED,2015-06-21T18:47:20Z,True,False,2015-06-22T16:43:21Z,,0,2,1,1,1,"Bonfire: Convert HTML Entities
-http://www.freecodecamp.com/challenges/bonfire-convert-html-entities
-
-fixing assert test to make it call the Convert() function
+EbookFoundation/free-programming-books,Adding Free Ebook - Programmer's Motivation for Beginners,CLOSED,2013-10-17T15:43:25Z,True,False,2013-10-17T15:48:39Z,,0,2,0,0,0,"Adding Free Ebook - Programmer's Motivation for Beginners
 "
-freeCodeCamp/freeCodeCamp,HTML Entities: Fix missing 'convert' function call,CLOSED,2015-06-22T05:30:05Z,True,False,2015-06-22T16:43:51Z,,0,2,1,1,1,"Added test for '<>' did not properly call the 'convert' function, so the test can never be completed.
+EbookFoundation/free-programming-books,Fixed the jQuery index link,MERGED,2013-10-17T16:41:53Z,True,True,2013-10-17T16:48:44Z,2013-10-17T16:48:44Z,0,2,0,1,1,"Fixed the jQuery index link matching the anchor name.
 "
-freeCodeCamp/freeCodeCamp,KrisVos130 NL Translation - Section 1,CLOSED,2015-06-22T13:48:06Z,True,False,2015-06-26T11:04:32Z,,0,1,0,8,8,"Translated the first section, get-set-for-free-code-camp.json, into Dutch. Since Slack had a maximum of 10.000 messages, I can't go back to see if I need to send a pull request when I have translated everything, or just a section.
+EbookFoundation/free-programming-books,Update free-programming-books.md,MERGED,2013-10-17T18:14:08Z,True,True,2013-10-17T19:19:28Z,2013-10-17T19:19:28Z,0,2,0,1,1,"Corrected link to Ada for Software Engineers.
 "
-freeCodeCamp/freeCodeCamp,Issue 1036 - Fixed minor grammatical mistake,MERGED,2015-06-23T03:43:41Z,True,True,2015-06-24T17:43:13Z,2015-06-24T17:43:13Z,0,2,1,1,1,"Fixed minor grammatical mistake - changed ""Your app should have an text field input element"" to ""Your app should have a text field input element""
-
-closes #1006 
-closes #1036 
+EbookFoundation/free-programming-books,Added Andrew Ng's course notes; updated broken link,MERGED,2013-10-17T20:04:24Z,True,True,2013-10-17T21:03:29Z,2013-10-17T21:03:29Z,0,2,0,1,1,"Ng's materials include problem sets, solutions, handouts/notes, and video lectures.
+Fixed broken link for PL/SQL Obsession.
 "
-freeCodeCamp/freeCodeCamp,Add video link to Symmetric Differences Bonfire,MERGED,2015-06-23T04:51:09Z,True,True,2015-06-28T22:20:06Z,2015-06-28T22:20:06Z,0,2,0,1,1,"The challenge can be quite difficult if you don't fully understand what a Symmetric Difference actually is.  The Wikipedia page is . . . not enlightening.  There is a very nice YouTube video which was very helpful to me.
+EbookFoundation/free-programming-books,creating a pt_BR version (portuguese from brazil),MERGED,2013-10-18T01:05:25Z,True,True,2013-10-18T06:46:11Z,2013-10-18T06:46:11Z,0,4,0,0,0,"creating a pt_BR version (portuguese from brazil) and adding some links for java and ruby
 "
-freeCodeCamp/freeCodeCamp,Fixes misspelling that caused 'undefined is not function' error,MERGED,2015-06-23T18:19:25Z,True,True,2015-06-24T17:34:31Z,2015-06-24T17:34:31Z,0,2,1,1,1,"`unDasherize` was assigned an undefined variable, causing 500 TypeErrors when trying to call it on `origChallengeName` at line 194 in `server/boot/challenge.js`, effectively rendering all challenges inaccessible.
+EbookFoundation/free-programming-books,Added Tango With Django.,MERGED,2013-10-18T08:23:53Z,True,True,2013-10-18T09:41:49Z,2013-10-18T09:41:49Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,"Added ""Making Games with Python & Pygame"" to ""free-programming-books.md""",MERGED,2013-10-18T09:52:39Z,True,True,2013-10-18T09:54:57Z,2013-10-18T09:54:57Z,0,3,3,0,0,
+EbookFoundation/free-programming-books,Add portuguese list of books to README,MERGED,2013-10-18T09:52:56Z,True,True,2013-10-18T09:54:34Z,2013-10-18T09:54:34Z,0,2,0,0,0,"This will add more visibility to the portuguese list.
 "
-freeCodeCamp/freeCodeCamp,"Some ""Slack to Gitter"" edits",CLOSED,2015-06-23T19:14:33Z,True,False,2015-06-24T17:31:03Z,,0,2,2,19,19,"Don't pull this yet. I split this up into two commits to make it easier to discuss. I was pretty much 100% about the edits in 77d4aff; I went ahead and changed 'in' to 'on' because it sounded better in my head and people in the chat seemed to agree.
-
-In f8fa6ee I just added Gitter as an alternative to Slack because Gitter works closely with GitHub and I wasn't sure whether the non-profits use GitHub or not.
-
-Since my Spanish is not what it should be, I only replaced the links, leaving a native Spanish speaker to reword the sentences in `seed/challenges/get-set-for-free-code-camp.json`.
-
-Lastly, I found a JSON key on line 129 in `common/models/user.json` called `sentSlackInvite`. I'm not sure what this does, couldn't find a reference anywhere else, so I didn't dare to remove it.
-
-Before (and if) you pull this I'd like to rebase it into a single commit, and, if someone explains the Spanish and `sentSlackInvite` parts, add those changes.
+EbookFoundation/free-programming-books,Fix typo,MERGED,2013-10-18T10:31:36Z,True,True,2013-10-18T10:34:30Z,2013-10-18T10:34:30Z,0,2,0,1,1,
+EbookFoundation/free-programming-books,Added Javascript good parts.,CLOSED,2013-10-18T12:43:20Z,True,False,2013-10-18T13:09:00Z,,0,4,1,1,1,
+EbookFoundation/free-programming-books,Update free-programming-books.md,MERGED,2013-10-18T12:50:28Z,True,True,2013-10-18T13:08:44Z,2013-10-18T13:08:44Z,0,2,0,0,0,"added javascript's http://devdocs.io/
 "
-freeCodeCamp/freeCodeCamp,Issue 1094 - Field Guide Error,MERGED,2015-06-24T03:47:05Z,True,True,2015-06-24T17:23:27Z,2015-06-24T17:23:27Z,0,2,1,1,1,"""Contact Jason Ruekert - he's @jsonify in Slack.""
-
-Since freecodecamp is now using Gitter again, changed it to say ""Contact Jason Ruekert - he's @jsonify in Gitter.""
+EbookFoundation/free-programming-books,Add german book list (more will follow soon),MERGED,2013-10-18T13:16:27Z,True,True,2013-10-18T13:34:18Z,2013-10-18T13:34:18Z,0,1,0,0,0,"More german books and resources will follow soon.
 "
-freeCodeCamp/freeCodeCamp,Issue 1080,MERGED,2015-06-24T03:57:01Z,True,True,2015-06-24T17:32:58Z,2015-06-24T17:32:58Z,0,2,1,1,1,"Changed ""Twitter Bootstrap"" to ""Bootstrap"". It used to be it's name but it's not any more. It's in their brand guidelines to not refer to it as Twitter Bootstrap any more: http://getbootstrap.com/about/#name
+EbookFoundation/free-programming-books,"Added C++ online site, learncpp.com",MERGED,2013-10-18T13:44:03Z,True,True,2013-10-18T14:45:21Z,2013-10-18T14:45:21Z,0,2,0,0,0,"Added a C++ site, learncpp. Online and pdf.
 "
-freeCodeCamp/freeCodeCamp,Issue 1059 - Wording issue on instructions,MERGED,2015-06-25T02:53:55Z,True,True,2015-06-28T22:22:10Z,2015-06-28T22:22:10Z,0,2,0,1,1,"Second issue to solve states ""Each of your Bootstrap buttons should be wrapped within its own a div element with the class ""col-xs-4"". Removed the word ""a"" to read ""wrapped within its own div"".
-
-This closes #1059
+EbookFoundation/free-programming-books,first list of spanish resources,MERGED,2013-10-18T14:43:02Z,True,True,2013-10-18T14:44:35Z,2013-10-18T14:44:35Z,0,3,0,0,0,"This is a starting point for free prograamming books/resources in spanish
 "
-freeCodeCamp/freeCodeCamp,Issue 923 - Grammatical error,MERGED,2015-06-25T03:40:42Z,True,True,2015-06-28T22:24:52Z,2015-06-28T22:24:52Z,0,2,0,1,1,"""Your pair will have their own cursor, and will be able to type text on his or her and keyboard.""
-
-Removed the ""and"" after ""his or her"".
-
-This closes #923
+EbookFoundation/free-programming-books,Add more books to the list and fixed markdown,MERGED,2013-10-18T14:51:50Z,True,True,2013-10-18T14:57:39Z,2013-10-18T14:57:39Z,0,1,0,3,3,
+EbookFoundation/free-programming-books,Added the HoTT book.,MERGED,2013-10-18T15:43:58Z,True,True,2013-10-18T16:11:52Z,2013-10-18T16:11:52Z,0,2,0,0,0,"Added the HoTT book.
 "
-freeCodeCamp/freeCodeCamp,First two sections translated into German,MERGED,2015-06-26T17:37:57Z,True,True,2015-06-28T22:22:58Z,2015-06-28T22:22:58Z,0,2,3,55,55,"Too many merge commits for my opinion. Any suggestions on how to handle branching/merging with multiple remotes would be greatly appreciated.
+EbookFoundation/free-programming-books,Added book to Machine Learning section,MERGED,2013-10-18T16:18:34Z,True,True,2013-10-18T20:31:27Z,2013-10-18T20:31:27Z,0,2,0,0,0,"Textbook draft of Probabilistic Models in the Study of Language.
 "
-freeCodeCamp/freeCodeCamp,Fix for Awkward Wording,CLOSED,2015-06-27T04:41:03Z,True,False,2015-06-27T06:24:19Z,,0,1,0,1,1,"Submitted this without reading the contribution guide lines. Will resubmit under properly named branch.
+EbookFoundation/free-programming-books,Update free-programming-books.md,MERGED,2013-10-18T17:15:16Z,True,True,2013-10-18T20:31:48Z,2013-10-18T20:31:48Z,0,2,0,0,0,"I added some more Free Python sources and a link to PDF file.
 "
-freeCodeCamp/freeCodeCamp,fixed grammar error,CLOSED,2015-06-27T06:38:46Z,True,False,2015-06-28T21:52:07Z,,0,1,2,1,1,"Was reading the field guide and noticed this awkward wording. This is a bit better, not sure if I should open an issue first or not, if an issue is needed I will gladly open one. 
-Thanks!
+EbookFoundation/free-programming-books,Add a link to Mother Tongues of Computer Languages Poster,MERGED,2013-10-18T18:05:05Z,True,True,2013-10-18T20:32:06Z,2013-10-18T20:32:06Z,0,2,0,0,0,"This is not really a book, but it shows history of programming languages nicely.
 "
-freeCodeCamp/freeCodeCamp,fake iphone display overlap fix (#976 fix),CLOSED,2015-06-29T10:55:49Z,True,False,2015-07-02T20:28:37Z,,0,2,1,0,0,"Fixes the over-lapping with the footer on challenges the involve the fake iphone result iframe (issue #976) tested in chrome (latest), firefox(latest) safari (last windows build) and IE11. It look slightly weird in IE 11 but the phone didn't overlap.Will still require testing on mac/linux
+EbookFoundation/free-programming-books,added git section and pro git book,MERGED,2013-10-18T18:16:27Z,True,True,2013-10-18T20:32:21Z,2013-10-18T20:32:21Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added Think Like (a) Git to the Git book list.,MERGED,2013-10-18T20:25:02Z,True,True,2013-10-18T20:33:14Z,2013-10-18T20:33:14Z,0,2,0,1,1,
+EbookFoundation/free-programming-books,"Added ""Wie werde ich unix guru"" to DE",MERGED,2013-10-18T20:30:13Z,True,True,2013-10-18T20:33:03Z,2013-10-18T20:33:03Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Update free-programming-books.md,MERGED,2013-10-18T20:45:35Z,True,True,2013-12-30T22:40:50Z,2013-12-30T22:40:50Z,0,2,1,3,3,"Adding RESTful Web Services book
 "
-freeCodeCamp/freeCodeCamp,Fix for #716,CLOSED,2015-06-29T15:09:13Z,True,False,2015-07-02T20:28:17Z,,0,1,2,36,36,"working and tested in chrome but renders in an odd way on IE Firefox and safari for windows. I'll set about fixing the issues in the other browsers if/when my other fix for the iphone is merged in/rejected as i think the two fixes may conflict with eachother
+EbookFoundation/free-programming-books,Update English Free Programming Books list.,MERGED,2013-10-18T23:12:34Z,True,True,2013-10-19T06:58:50Z,2013-10-19T06:58:50Z,0,2,1,4,4,"Deleted and merged two entries for Addy Osmani's book:Learning JavaScript Design Patterns (name was changed when it was published). Added a few author names to the Javascript section as well as Noel Rappin's great book Managing Space and Time With JavaScript.
 "
-freeCodeCamp/freeCodeCamp,'Font degrade'-test now check order of font-familiy.,MERGED,2015-06-30T00:56:36Z,True,True,2015-07-02T20:57:41Z,2015-07-02T20:57:41Z,0,3,0,2,2,"The 'Specify How Fonts Should Degrade' test cases would now make sure that the `Lobster` font is the first one specified and that it degrades to `monospace`.
-
-Fixes #1151
+EbookFoundation/free-programming-books,Update free-programming-books.md,MERGED,2013-10-19T02:28:09Z,True,True,2013-10-19T07:00:18Z,2013-10-19T07:00:17Z,0,2,0,0,0,"Added a link to my Python programming book's blog
 "
-freeCodeCamp/freeCodeCamp,Slightly clarifies 'Uncomment HTML'.,MERGED,2015-06-30T01:19:04Z,True,True,2015-07-02T20:56:48Z,2015-07-02T20:56:48Z,0,3,0,1,1,"This slightly clarifies what is needed to complete the 'Uncomment HTML' waypoint.
-Not at all sure this is a necessary change.
-
-Regarding #1158
+EbookFoundation/free-programming-books,Added Data Mining and Analysis to Datamining section,MERGED,2013-10-19T03:53:44Z,True,True,2013-10-19T07:00:31Z,2013-10-19T07:00:31Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added book to Parallel Programming section,MERGED,2013-10-19T04:01:23Z,True,True,2013-10-19T07:00:41Z,2013-10-19T07:00:41Z,0,2,1,0,0,
+EbookFoundation/free-programming-books,Italian tranlation of How To Think Like a Computer Scientist,MERGED,2013-10-19T07:35:37Z,True,True,2013-10-19T08:34:07Z,2013-10-19T08:34:07Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Add django book,CLOSED,2013-10-19T08:27:13Z,True,False,2013-10-19T08:33:58Z,,0,2,2,0,0,"Added the Django Book
 "
-freeCodeCamp/freeCodeCamp,Quite a few spelling and grammar fixes,MERGED,2015-06-30T02:35:41Z,True,True,2015-07-02T20:56:11Z,2015-07-02T20:56:11Z,0,3,0,20,20,"Deals with the errors brought up in #1107, #1116, #1120, and #1129, as well as some other spelling and grammar errors.
+EbookFoundation/free-programming-books,Few books from hackershelf; add APL,MERGED,2013-10-19T13:37:18Z,True,True,2013-10-19T15:48:43Z,2013-10-19T15:48:43Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,learn to program,MERGED,2013-10-19T22:53:47Z,True,True,2013-10-20T09:09:27Z,2013-10-20T09:09:27Z,0,2,0,1,1,"adding the book learn to program of Chris Pine
 "
-freeCodeCamp/freeCodeCamp,Waypoint: Get Set for Basejumps changed deprecated heroku command,MERGED,2015-06-30T10:29:20Z,True,True,2015-07-02T20:51:23Z,2015-07-02T20:51:23Z,0,2,0,1,1,"heroku addons:add is deprecated, use heroku addons:create instead
+EbookFoundation/free-programming-books,add JSBooks to meta-lists,MERGED,2013-10-20T04:45:16Z,True,True,2013-10-20T09:10:15Z,2013-10-20T09:10:15Z,0,2,0,0,0,"Found a collection of free JS ebooks - the meta-lists section seemed the most approprate place to put this.
 "
-freeCodeCamp/freeCodeCamp,Reword parts of 'how-to-npm'-waypoint.,MERGED,2015-07-01T11:49:28Z,True,True,2015-07-02T20:50:22Z,2015-07-02T20:50:22Z,0,3,1,2,2,"Rewords some small parts of the 'Manage Packages with NPM'-waypoint.
-
-Fixes #1168 and probably #991.
+EbookFoundation/free-programming-books,Add Knockout.js Starter ebook,CLOSED,2013-10-20T04:51:49Z,True,False,2013-11-29T18:40:26Z,,0,2,1,0,0,
+EbookFoundation/free-programming-books,Add Rails 4 ebook,MERGED,2013-10-20T04:55:50Z,True,True,2013-10-20T09:11:02Z,2013-10-20T09:11:02Z,0,3,2,0,0,
+EbookFoundation/free-programming-books,Add Bash links,MERGED,2013-10-20T08:24:43Z,True,True,2013-10-20T09:11:35Z,2013-10-20T09:11:35Z,0,2,0,0,0,"Can i add other links on bash books?
 "
-freeCodeCamp/freeCodeCamp,solution to issue #1173,MERGED,2015-07-01T14:18:15Z,True,True,2015-07-02T20:49:04Z,2015-07-02T20:49:04Z,0,3,4,1,1,"this solution may also be needed for some of the other css-based challenges
+EbookFoundation/free-programming-books, Add french book on R by Vincent Goulet,MERGED,2013-10-20T08:47:39Z,True,True,2013-10-20T09:11:49Z,2013-10-20T09:11:49Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Create Japanese book list and add it to README,MERGED,2013-10-20T08:48:11Z,True,True,2013-10-20T09:12:31Z,2013-10-20T09:12:31Z,0,2,1,0,0,
+EbookFoundation/free-programming-books,Add two TeX books,MERGED,2013-10-20T08:50:22Z,True,True,2013-10-20T09:12:48Z,2013-10-20T09:12:48Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,"Add french book ""Bases de donnÃ©es I""",MERGED,2013-10-20T08:54:17Z,True,True,2013-10-20T09:13:02Z,2013-10-20T09:13:02Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,"Add french book ""Algorithmique"", Michel Quercia",MERGED,2013-10-20T10:26:18Z,True,True,2013-10-20T12:08:05Z,2013-10-20T12:08:05Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Add MOOC edX,MERGED,2013-10-20T10:26:53Z,True,True,2013-10-20T12:08:11Z,2013-10-20T12:08:11Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,coquille mardkown,MERGED,2013-10-20T11:46:32Z,True,True,2013-10-20T12:11:10Z,2013-10-20T12:11:10Z,0,2,0,0,0,
+EbookFoundation/free-programming-books,Added German OpenBooks by O'Reilly,MERGED,2013-10-20T12:06:49Z,True,True,2013-10-20T12:11:20Z,2013-10-20T12:11:20Z,0,2,1,0,0,"Added German OpenBooks by O'Reilly from http://www.oreilly.de/open-books/index.html
 "
-freeCodeCamp/freeCodeCamp,Proposing the addition of an API,CLOSED,2015-07-03T15:37:49Z,True,False,2015-07-03T18:17:25Z,,0,2,3,0,0,"Used for the random quotes zipline
+EbookFoundation/free-programming-books,Added 'Praktischer Einstieg in MySQL mit PHP' by O'Reilly,MERGED,2013-10-20T12:45:59Z,True,True,2013-10-20T13:31:06Z,2013-10-20T13:31:06Z,0,2,0,0,0,"One more German book by O'Reilly
 "
-freeCodeCamp/freeCodeCamp,Fixed the check for the scroll locker exists,CLOSED,2015-07-04T17:28:42Z,True,False,2015-08-01T19:43:02Z,,0,2,2,14,14,"Credit to @BerkeleyTrue for fining my stupid mistake!
-"
-freeCodeCamp/freeCodeCamp,Fixed typos in Bonfire: Friendly Date Ranges #1156,MERGED,2015-07-04T23:05:44Z,True,True,2015-08-03T23:02:50Z,2015-08-03T23:02:50Z,0,2,2,1,1,"Fixes issue #1156 
-"
-freeCodeCamp/freeCodeCamp,Fixes issue #1196 and adds new test from issue #1191,CLOSED,2015-07-05T03:11:38Z,True,False,2015-07-08T01:37:00Z,,0,0,0,1,1,"Fixes Issue #1196 where one may encounter a `git fetch` error when trying to install dependencies (error generated from custom `loopback` module). This also adds a new assertion test from issue #1191 by testing all `p` elements are removed and are instead replaced with an unordered list as stated in the instructions.
-"
-freeCodeCamp/freeCodeCamp,Corrects issue #1060,CLOSED,2015-07-06T00:55:18Z,True,False,2015-07-08T07:15:30Z,,0,1,0,2,2,"[See explanation here.](https://github.com/FreeCodeCamp/freecodecamp/issues/1060#issuecomment-118672250)
-"
-freeCodeCamp/freeCodeCamp,Fixes issue #1025,CLOSED,2015-07-06T05:55:14Z,True,False,2015-07-08T07:15:40Z,,0,1,0,3,3,"This fixes issue #1025 where `Cannot read property 'length' of null` error replaces the text of the condition `Make sure your div element has a closing tag.` when the `div` tag is broken.
-"
-freeCodeCamp/freeCodeCamp,Fixes issue #1213,CLOSED,2015-07-06T21:13:49Z,True,False,2015-07-08T07:15:48Z,,0,0,0,2,2,
-freeCodeCamp/freeCodeCamp,Fix for a grammar issue in add a submit button to a form ( #1218 ),MERGED,2015-07-06T22:46:32Z,True,True,2015-07-08T19:00:33Z,2015-07-08T19:00:33Z,0,2,8,1,1,"Fix for issue #1218
-"
-freeCodeCamp/freeCodeCamp,Fixes issue #1204,CLOSED,2015-07-06T23:06:03Z,True,False,2015-07-08T07:15:56Z,,0,0,0,3,3,"[See here](https://github.com/FreeCodeCamp/freecodecamp/issues/1204#issuecomment-119017716)
-"
-freeCodeCamp/freeCodeCamp,First commit to new js course,CLOSED,2015-07-06T23:14:30Z,True,False,2015-07-07T19:41:05Z,,0,1,0,124,124,"Last challenge is refusing to work. Will go about fixing the problem tomorrow.
-"
-freeCodeCamp/freeCodeCamp,First commit to new js course,CLOSED,2015-07-07T23:03:43Z,True,False,2015-07-09T22:01:09Z,,0,2,3,124,124,"First 17 challenges.
-"
-freeCodeCamp/freeCodeCamp,Improved consitency in 'Friendly Date Ranges' test cases.,MERGED,2015-07-08T19:21:14Z,True,True,2015-08-03T23:04:37Z,2015-08-03T23:04:37Z,0,3,2,1,1,"Changes a test case so it follows the ""one month apart"" rule set by a previous test.
-
-Fixes #410
-"
-freeCodeCamp/freeCodeCamp,Update 2 of the new js curriculum!,MERGED,2015-07-08T23:26:30Z,True,True,2015-07-10T16:31:49Z,2015-07-10T16:31:49Z,0,3,5,124,124,"7 more challenges added!
-"
-freeCodeCamp/freeCodeCamp,Corrected challenges and typos Basic HTML,CLOSED,2015-07-09T01:15:41Z,True,False,2015-08-12T08:22:08Z,,0,3,1,2,2,"Just corrected a few mistakes on code and instructions.
-"
-freeCodeCamp/freeCodeCamp,Tidying the stylesheets,CLOSED,2015-07-09T02:45:53Z,True,False,2015-09-14T21:23:59Z,,0,4,6,335,335,"...and some related stuff.
-
-I'm not even sure what I was doing anymore, but I stumbled upon an unused CSS selector, decided to look for more, and found quite a few. I'm honsetly not sure if these are somehow used through some sort of magic, but I searched through the entire codebase and found no other references to them, so they should be safe to remove.
-
-Other than remove unused selectors, I organized some of them, fixed the stylization of a few, replaced one, as well as replaced the ubiqitous `#eee` with the already existing `@gray-lighter` variable.
-
-This should hopefully clear the CSS/LESS up a bit, but don't just trust me, get in there and read (specifically the `next-challenge-button` and `delay-half` parts, they confused me) ; I did my best to make sure I'm not deleting some classes, essential to FCC's design, but I'm not making any promises.
-"
-freeCodeCamp/freeCodeCamp,Change Height on Footer element in Bonfire View,CLOSED,2015-07-10T16:46:50Z,True,False,2015-08-19T20:47:38Z,,0,6,17,1,1,"Refer to line 677. Proposing removal of Padding increase on footer links in bonfire view as it causes the page content to exceed viewport height and creates a scrollbar. This issue currently effects all bonfire views. In response to issue #1247 
-
-closes #1247
-"
-freeCodeCamp/freeCodeCamp,Removes dotted outlines on links in Firefox,CLOSED,2015-07-10T19:20:26Z,True,False,2015-08-02T18:06:03Z,,0,2,4,0,0,"Stops all anchor elements from doing this when clicked...
-![fcc-pre](https://cloud.githubusercontent.com/assets/3090888/8627096/0f28c31c-2749-11e5-8733-b8d51907a647.png)
-...and makes them do this instead:
-![fcc-post](https://cloud.githubusercontent.com/assets/3090888/8627095/0f24d4f0-2749-11e5-9e64-02963e197cce.png)
-"
-freeCodeCamp/freeCodeCamp,'Create a Text Field' now makes sure the input type is text.,CLOSED,2015-07-10T22:54:09Z,True,False,2015-08-02T00:07:38Z,,0,2,1,1,1,"Instead of just checking if there's an `input` tag, the test now checks for an `input` tag with the `type` attribute set to `text`.
-
-Fixes #1241.
-"
-freeCodeCamp/freeCodeCamp,Profile pictures in 'Camper News' now link to profiles.,MERGED,2015-07-10T23:14:52Z,True,True,2015-08-01T23:51:56Z,2015-08-01T23:51:56Z,0,2,0,2,2,"A minor typo in some Jade files caused profile pictures in 'Camper News' to lead to the homepage instead of the profiles belonging to the news posters. If I found all the typos, this should no longer be a problem.
-
-Fixes #1235
+EbookFoundation/free-programming-books,Added the Deploy Django book,CLOSED,2013-10-20T12:48:28Z,True,False,2013-10-20T13:32:26Z,,0,2,1,0,0,"My first instinct was that this was a tutorial, albeit a very detailed one. But the site refers to it as a book so it's up to @vhf to make a decision :)
 "
